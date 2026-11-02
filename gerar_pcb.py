@@ -116,11 +116,13 @@ class Board:
         return fp
 
 
-# Footprint reversível do PG1316S, segundo o "land pattern" da ficha técnica da Kailh.
-# Os pads têm um furo metalizado que liga a frente ao verso, por isso o switch pode ser
-# soldado em qualquer face. O switch não tem polaridade, por isso os contactos 1 e 2
-# podem trocar de lado quando a placa é virada. Os pinos de alinhamento (Ø1,0 e Ø1,2)
-# não são simétricos: há furos para as duas faces.
+# Footprint reversível do PG1316S. Chassi e furos seguem a ficha técnica da Kailh; os
+# contactos (x = -0,5 e +1,7 mm) seguem o footprint testado do Delta Omega rev4
+# (unspecworks/delta-omega) e o reversível do mikefive. Os terminais não são simétricos,
+# por isso no verso os pads de contacto estão espelhados (x = +0,5 e -1,7 mm); o router
+# liga cada contacto da frente ao do verso. Os pads do chassi têm um furo metalizado
+# e servem as duas faces. Os pinos de alinhamento (Ø1,0 e Ø1,2) também não são
+# simétricos: há furos para as duas faces.
 SWITCH_FP = """(footprint "corne:Kailh_PG1316S_reversible" (layer "F.Cu") (tedit 0) (tstamp X)
   (at 0 0)
   (attr smd)
@@ -138,8 +140,10 @@ SWITCH_FP = """(footprint "corne:Kailh_PG1316S_reversible" (layer "F.Cu") (tedit
   (fp_line (start 7.85 -7.85) (end 7.25 -7.85) (layer "B.SilkS") (width 0.12) (tstamp X))
   (fp_line (start -7.85 7.85) (end -7.85 7.25) (layer "B.SilkS") (width 0.12) (tstamp X))
   (fp_line (start -7.85 7.85) (end -7.25 7.85) (layer "B.SilkS") (width 0.12) (tstamp X))
-  (pad "1" thru_hole rect (at -2.5 2.65) (size 1.55 2) (drill 0.5) (layers *.Cu *.Mask F.Paste B.Paste) (net 1 "x") (tstamp X))
-  (pad "2" thru_hole rect (at 2.5 2.65) (size 1.55 2) (drill 0.5) (layers *.Cu *.Mask F.Paste B.Paste) (net 1 "x") (tstamp X))
+  (pad "1" smd rect (at -0.5125 2.65) (size 0.975 2) (layers "F.Cu" "F.Paste" "F.Mask") (net 1 "x") (tstamp X))
+  (pad "2" smd rect (at 1.7 2.65) (size 1.55 2) (layers "F.Cu" "F.Paste" "F.Mask") (net 1 "x") (tstamp X))
+  (pad "1" smd rect (at 0.5125 2.65) (size 0.975 2) (layers "B.Cu" "B.Paste" "B.Mask") (net 1 "x") (tstamp X))
+  (pad "2" smd rect (at -1.7 2.65) (size 1.55 2) (layers "B.Cu" "B.Paste" "B.Mask") (net 1 "x") (tstamp X))
   (pad "3" thru_hole rect (at -6.35 -6) (size 2 2) (drill 0.6) (layers *.Cu *.Mask F.Paste B.Paste) (tstamp X))
   (pad "3" thru_hole rect (at 6.35 -6) (size 2 2) (drill 0.6) (layers *.Cu *.Mask F.Paste B.Paste) (tstamp X))
   (pad "3" thru_hole rect (at -6.35 6) (size 2 2) (drill 0.6) (layers *.Cu *.Mask F.Paste B.Paste) (tstamp X))
@@ -269,7 +273,7 @@ def main(dust_path):
     pp[:] = [c for c in pp if not (isinstance(c, list) and c[0] == 'outputdirectory')]
     body = [
         ['general', ['thickness', '1.6']], ['paper', '"A3"'],
-        ['title_block', ['title', '"corne-pg1316s"'], ['rev', '"v0.1"'], ['company', '"baseado no dust (Jason Hazel) e no mikefive (Mike Holscher)"']],
+        ['title_block', ['title', '"corne-pg1316s"'], ['rev', '"v0.2"'], ['company', '"baseado no dust (Jason Hazel) e no mikefive (Mike Holscher)"']],
         find(dust, 'layers')[0], setup,
     ] + [['net', str(i), f'"{n}"'] for i, n in enumerate(board.nets)] + board.footprints + gr
     out = '(kicad_pcb (version 20211014) (generator pcbnew)\n'
