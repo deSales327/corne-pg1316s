@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="85.50 85.50 137.55 95.85" width="825" font-family="sans-serif">
+<rect x="85.5" y="85.5" width="100%" height="100%" fill="#fff"/>
+<polygon points="93.00,97.88 92.71,97.90 92.43,97.99 92.17,98.13 91.94,98.31 91.75,98.54 91.61,98.80 91.53,99.08 91.50,99.38 91.50,147.38 91.56,147.81 91.68,148.08 91.84,148.33 92.17,148.62 92.56,148.81 93.00,148.88 124.81,148.87 125.23,148.76 125.61,148.54 125.81,148.33 126.21,147.77 126.74,147.15 127.33,146.58 127.98,146.07 128.67,145.64 129.41,145.28 130.18,144.99 130.90,144.80 131.71,144.67 132.58,144.62 142.09,144.62 142.38,144.56 142.65,144.45 143.69,143.71 144.39,143.32 145.07,143.03 145.70,142.81 146.49,142.63 147.22,142.53 147.90,142.50 151.48,142.50 152.32,142.54 153.10,142.66 153.79,142.84 154.53,143.10 155.24,143.43 155.97,143.87 156.60,144.34 157.13,144.82 157.66,145.40 158.13,146.03 158.54,146.70 158.90,147.47 159.16,148.21 159.35,148.98 159.46,149.75 159.50,150.48 159.51,161.27 159.61,161.70 159.75,161.96 159.94,162.19 160.29,162.45 160.56,162.56 161.00,162.62 175.46,162.63 176.11,162.65 176.80,162.74 177.53,162.90 192.37,166.88 193.08,167.10 193.73,167.37 194.33,167.69 207.39,175.22 207.81,175.34 208.11,175.35 208.40,175.30 208.67,175.20 208.92,175.05 209.23,174.73 216.86,161.53 216.99,161.24 217.05,160.94 217.00,103.50 216.94,103.06 216.82,102.79 216.66,102.55 216.33,102.25 215.94,102.06 215.50,102.00 201.32,102.00 200.58,101.97 199.83,101.86 199.02,101.67 198.37,101.44 197.68,101.14 196.97,100.72 196.41,100.33 195.83,99.84 195.26,99.24 194.79,98.65 194.41,98.07 194.06,97.40 193.70,96.55 193.54,96.30 193.21,96.00 192.81,95.82 192.37,95.75 181.93,95.75 181.15,95.71 180.49,95.62 179.77,95.45 179.01,95.20 178.33,94.90 177.75,94.58 176.65,93.80 176.38,93.69 176.09,93.63 164.93,93.62 164.15,93.59 163.49,93.49 162.77,93.33 162.01,93.08 161.33,92.78 160.75,92.45 159.65,91.68 159.23,91.53 158.94,91.50 142.91,91.51 142.62,91.56 142.35,91.68 141.77,92.11 141.13,92.52 140.31,92.94 139.60,93.22 138.79,93.44 137.96,93.57 137.06,93.62 126.34,93.62 126.05,93.65 125.64,93.80 125.39,93.96 125.19,94.17 124.79,94.73 124.31,95.30 123.73,95.87 123.09,96.38 122.39,96.82 121.66,97.19 120.90,97.49 120.10,97.70 119.22,97.83 118.42,97.88 93.00,97.88" fill="#4b2a7a" stroke="#c9b6ff" stroke-width="0.3"/>
+<polygon points="203.55,101.63 197.32,102.26 196.11,103.25 196.00,104.75 196.00,122.74 196.11,124.25 197.32,126.50 206.32,126.50 212.55,125.87 213.20,125.50 213.89,124.25 213.99,122.74 213.99,104.75 213.89,103.25 212.55,101.63 203.55,101.63" fill="#2d6a4f" fill-opacity="0.8" stroke="#95d5b2" stroke-width="0.25"/>
+<text x="205.00" y="114.05" font-size="2" fill="#fff" text-anchor="middle">XIAO1</text>
+<polygon points="213.67,134.23 212.52,135.51 212.52,141.26 213.67,142.53 216.77,142.53 216.77,134.23 213.67,134.23" fill="#2d6a4f" fill-opacity="0.8" stroke="#95d5b2" stroke-width="0.25"/>
+<text x="214.72" y="138.38" font-size="2" fill="#fff" text-anchor="middle">PWR1</text>
+<polygon points="108.25,98.12 108.25,114.62 91.75,114.62 91.75,98.12 108.25,98.12" fill="#f4f1ea" stroke="#333" stroke-width="0.25" rx="1"/>
+<text x="100.00" y="105.38" font-size="2.6" text-anchor="middle" transform="rotate(-0.0 100.00 106.38)">S1</text>
+<text x="100.00" y="109.38" font-size="2" fill="#666" text-anchor="middle" transform="rotate(-0.0 100.00 106.38)">c0 · r3</text>
+<polygon points="108.25,115.12 108.25,131.62 91.75,131.62 91.75,115.12 108.25,115.12" fill="#f4f1ea" stroke="#333" stroke-width="0.25" rx="1"/>
+<text x="100.00" y="122.38" font-size="2.6" text-anchor="middle" transform="rotate(-0.0 100.00 123.38)">S2</text>
+<text x="100.00" y="126.38" font-size="2" fill="#666" text-anchor="middle" transform="rotate(-0.0 100.00 123.38)">c0 · r2</text>
+<polygon points="108.25,132.12 108.25,148.62 91.75,148.62 91.75,132.12 108.25,132.12" fill="#f4f1ea" stroke="#333" stroke-width="0.25" rx="1"/>
+<text x="100.00" y="139.38" font-size="2.6" text-anchor="middle" transform="rotate(-0.0 100.00 140.38)">S3</text>
+<text x="100.00" y="143.38" font-size="2" fill="#666" text-anchor="middle" transform="rotate(-0.0 100.00 140.38)">c0 · r1</text>
+<polygon points="125.25,98.12 125.25,114.62 108.75,114.62 108.75,98.12 125.25,98.12" fill="#f4f1ea" stroke="#333" stroke-width="0.25" rx="1"/>
+<text x="117.00" y="105.38" font-size="2.6" text-anchor="middle" transform="rotate(-0.0 117.00 106.38)">S4</text>
+<text x="117.00" y="109.38" font-size="2" fill="#666" text-anchor="middle" transform="rotate(-0.0 117.00 106.38)">c1 · r3</text>
+<polygon points="125.25,115.12 125.25,131.62 108.75,131.62 108.75,115.12 125.25,115.12" fill="#f4f1ea" stroke="#333" stroke-width="0.25" rx="1"/>
+<text x="117.00" y="122.38" font-size="2.6" text-anchor="middle" transform="rotate(-0.0 117.00 123.38)">S5</text>
+<text x="117.00" y="126.38" font-size="2" fill="#666" text-anchor="middle" transform="rotate(-0.0 117.00 123.38)">c1 · r2</text>
+<polygon points="125.25,132.12 125.25,148.62 108.75,148.62 108.75,132.12 125.25,132.12" fill="#f4f1ea" stroke="#333" stroke-width="0.25" rx="1"/>
+<text x="117.00" y="139.38" font-size="2.6" text-anchor="middle" transform="rotate(-0.0 117.00 140.38)">S6</text>
+<text x="117.00" y="143.38" font-size="2" fill="#666" text-anchor="middle" transform="rotate(-0.0 117.00 140.38)">c1 · r1</text>
+<polygon points="142.25,93.88 142.25,110.38 125.75,110.38 125.75,93.88 142.25,93.88" fill="#f4f1ea" stroke="#333" stroke-width="0.25" rx="1"/>
+<text x="134.00" y="101.12" font-size="2.6" text-anchor="middle" transform="rotate(-0.0 134.00 102.12)">S7</text>
+<text x="134.00" y="105.12" font-size="2" fill="#666" text-anchor="middle" transform="rotate(-0.0 134.00 102.12)">c2 · r3</text>
+<polygon points="142.25,110.88 142.25,127.38 125.75,127.38 125.75,110.88 142.25,110.88" fill="#f4f1ea" stroke="#333" stroke-width="0.25" rx="1"/>
+<text x="134.00" y="118.12" font-size="2.6" text-anchor="middle" transform="rotate(-0.0 134.00 119.12)">S8</text>
+<text x="134.00" y="122.12" font-size="2" fill="#666" text-anchor="middle" transform="rotate(-0.0 134.00 119.12)">c2 · r2</text>
+<polygon points="142.25,127.88 142.25,144.38 125.75,144.38 125.75,127.88 142.25,127.88" fill="#f4f1ea" stroke="#333" stroke-width="0.25" rx="1"/>
+<text x="134.00" y="135.12" font-size="2.6" text-anchor="middle" transform="rotate(-0.0 134.00 136.12)">S9</text>
+<text x="134.00" y="139.12" font-size="2" fill="#666" text-anchor="middle" transform="rotate(-0.0 134.00 136.12)">c2 · r1</text>
+<polygon points="159.25,91.75 159.25,108.25 142.75,108.25 142.75,91.75 159.25,91.75" fill="#f4f1ea" stroke="#333" stroke-width="0.25" rx="1"/>
+<text x="151.00" y="99.00" font-size="2.6" text-anchor="middle" transform="rotate(-0.0 151.00 100.00)">S10</text>
+<text x="151.00" y="103.00" font-size="2" fill="#666" text-anchor="middle" transform="rotate(-0.0 151.00 100.00)">c3 · r3</text>
+<polygon points="159.25,108.75 159.25,125.25 142.75,125.25 142.75,108.75 159.25,108.75" fill="#f4f1ea" stroke="#333" stroke-width="0.25" rx="1"/>
+<text x="151.00" y="116.00" font-size="2.6" text-anchor="middle" transform="rotate(-0.0 151.00 117.00)">S11</text>
+<text x="151.00" y="120.00" font-size="2" fill="#666" text-anchor="middle" transform="rotate(-0.0 151.00 117.00)">c3 · r2</text>
+<polygon points="159.25,125.75 159.25,142.25 142.75,142.25 142.75,125.75 159.25,125.75" fill="#f4f1ea" stroke="#333" stroke-width="0.25" rx="1"/>
+<text x="151.00" y="133.00" font-size="2.6" text-anchor="middle" transform="rotate(-0.0 151.00 134.00)">S12</text>
+<text x="151.00" y="137.00" font-size="2" fill="#666" text-anchor="middle" transform="rotate(-0.0 151.00 134.00)">c3 · r1</text>
+<polygon points="176.25,93.88 176.25,110.38 159.75,110.38 159.75,93.88 176.25,93.88" fill="#f4f1ea" stroke="#333" stroke-width="0.25" rx="1"/>
+<text x="168.00" y="101.12" font-size="2.6" text-anchor="middle" transform="rotate(-0.0 168.00 102.12)">S13</text>
+<text x="168.00" y="105.12" font-size="2" fill="#666" text-anchor="middle" transform="rotate(-0.0 168.00 102.12)">c4 · r3</text>
+<polygon points="176.25,110.88 176.25,127.38 159.75,127.38 159.75,110.88 176.25,110.88" fill="#f4f1ea" stroke="#333" stroke-width="0.25" rx="1"/>
+<text x="168.00" y="118.12" font-size="2.6" text-anchor="middle" transform="rotate(-0.0 168.00 119.12)">S14</text>
+<text x="168.00" y="122.12" font-size="2" fill="#666" text-anchor="middle" transform="rotate(-0.0 168.00 119.12)">c4 · r2</text>
+<polygon points="176.25,127.88 176.25,144.38 159.75,144.38 159.75,127.88 176.25,127.88" fill="#f4f1ea" stroke="#333" stroke-width="0.25" rx="1"/>
+<text x="168.00" y="135.12" font-size="2.6" text-anchor="middle" transform="rotate(-0.0 168.00 136.12)">S15</text>
+<text x="168.00" y="139.12" font-size="2" fill="#666" text-anchor="middle" transform="rotate(-0.0 168.00 136.12)">c4 · r1</text>
+<polygon points="193.25,96.00 193.25,112.50 176.75,112.50 176.75,96.00 193.25,96.00" fill="#f4f1ea" stroke="#333" stroke-width="0.25" rx="1"/>
+<text x="185.00" y="103.25" font-size="2.6" text-anchor="middle" transform="rotate(-0.0 185.00 104.25)">S16</text>
+<text x="185.00" y="107.25" font-size="2" fill="#666" text-anchor="middle" transform="rotate(-0.0 185.00 104.25)">c5 · r3</text>
+<polygon points="193.25,113.00 193.25,129.50 176.75,129.50 176.75,113.00 193.25,113.00" fill="#f4f1ea" stroke="#333" stroke-width="0.25" rx="1"/>
+<text x="185.00" y="120.25" font-size="2.6" text-anchor="middle" transform="rotate(-0.0 185.00 121.25)">S17</text>
+<text x="185.00" y="124.25" font-size="2" fill="#666" text-anchor="middle" transform="rotate(-0.0 185.00 121.25)">c5 · r2</text>
+<polygon points="193.25,130.00 193.25,146.50 176.75,146.50 176.75,130.00 193.25,130.00" fill="#f4f1ea" stroke="#333" stroke-width="0.25" rx="1"/>
+<text x="185.00" y="137.25" font-size="2.6" text-anchor="middle" transform="rotate(-0.0 185.00 138.25)">S18</text>
+<text x="185.00" y="141.25" font-size="2" fill="#666" text-anchor="middle" transform="rotate(-0.0 185.00 138.25)">c5 · r1</text>
+<polygon points="176.25,145.88 176.25,162.38 159.75,162.38 159.75,145.88 176.25,145.88" fill="#f4f1ea" stroke="#333" stroke-width="0.25" rx="1"/>
+<text x="168.00" y="153.12" font-size="2.6" text-anchor="middle" transform="rotate(-0.0 168.00 154.12)">S19</text>
+<text x="168.00" y="157.12" font-size="2" fill="#666" text-anchor="middle" transform="rotate(-0.0 168.00 154.12)">c3 · r0</text>
+<polygon points="197.50,150.91 193.23,166.85 177.29,162.58 181.56,146.64 197.50,150.91" fill="#f4f1ea" stroke="#333" stroke-width="0.25" rx="1"/>
+<text x="187.39" y="155.74" font-size="2.6" text-anchor="middle" transform="rotate(15.0 187.39 156.74)">S20</text>
+<text x="187.39" y="159.74" font-size="2" fill="#666" text-anchor="middle" transform="rotate(15.0 187.39 156.74)">c4 · r0</text>
+<polygon points="216.72,161.27 208.47,175.56 194.18,167.31 202.43,153.02 216.72,161.27" fill="#f4f1ea" stroke="#333" stroke-width="0.25" rx="1"/>
+<text x="205.45" y="163.29" font-size="2.6" text-anchor="middle" transform="rotate(30.0 205.45 164.29)">S21</text>
+<text x="205.45" y="167.29" font-size="2" fill="#666" text-anchor="middle" transform="rotate(30.0 205.45 164.29)">c5 · r0</text>
+</svg>
