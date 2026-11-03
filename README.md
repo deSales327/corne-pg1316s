@@ -15,8 +15,8 @@ para os switches ultrafinos **Kailh PG1316S**, com keycaps impressas em 3D (do
 - Roteada nas duas camadas, com plano de GND.
 - **DRC do KiCad 10: 0 violações e 0 ligações em falta.**
 - Gerbers e furação prontos em [`corne-pg1316s-gerbers.zip`](corne-pg1316s-gerbers.zip).
-- **Ainda não foi fabricada nem testada.** As posições dos contactos do switch foram confirmadas com o footprint do [Delta Omega](https://github.com/unspecworks/delta-omega) (rev4, já fabricado) e com o do mikefive. Mesmo assim, confirma com um switch físico (por exemplo, numa impressão 1:1) antes de encomendar.
-- **v0.2:** os contactos do switch passaram de x = ±2,5 mm para x = −0,5 e +1,7 mm (no verso ficam espelhados). Os gerbers da v0.1 **não servem**.
+- **Ainda não foi fabricada nem testada.** Há footprints de PG1316S já fabricados com os contactos em sítios diferentes: x = ±2,5 mm (ficha técnica, [mikefive](https://github.com/mikeholscher/zmk-config-mikefive), [ULK](https://github.com/Goga64/ULK)) e x = −0,5 / +1,7 mm ([Delta Omega](https://github.com/unspecworks/delta-omega) rev4). Os terminais do switch são largos o suficiente para os dois. Mesmo assim, confirma com um switch físico (por exemplo, numa impressão 1:1) antes de encomendar.
+- **v0.3:** os pads de contacto são largos e cobrem as duas posições testadas: o pad 1 vai de −3,275 a −0,025 mm e o pad 2 de +0,925 a +3,275 mm, como no footprint reversível do mikefive. No verso ficam espelhados. Usa os gerbers da v0.3. As versões anteriores tinham pads mais estreitos, cada uma só numa das posições.
 
 ## Componentes (por metade)
 | Qtd. | Peça |
@@ -33,7 +33,7 @@ para os switches ultrafinos **Kailh PG1316S**, com keycaps impressas em 3D (do
 - **Espaçamento de 17 × 17 mm** para keycaps de 16,5 × 16,5 mm. Cada metade mede 125,6 × 83,9 mm.
 - **Footprint PG1316S reversível**, desenhado em `gerar_pcb.py`:
   - O chassi e os furos seguem a ficha técnica `CPG1316S01D02`.
-  - Os contactos seguem o footprint testado do Delta Omega.
+  - Os contactos são largos e cobrem as posições dos footprints testados do mikefive, do ULK e do Delta Omega.
   - Os terminais do switch não são simétricos, por isso os contactos têm pads próprios em cada face, espelhados no verso, e as pistas ligam-nos entre si.
   - Os pads do chassi têm um furo metalizado e servem as duas faces.
   - Há furos para os pinos de alinhamento das duas faces.
@@ -70,7 +70,7 @@ Precisas do `shapely` (pip), do KiCad 10, do Freerouting 2.5 e do Java 25.
 ## Créditos
 - Díodo, XIAO e interruptor: [dust](https://github.com/hazels-garage/dust), de Jason Hazel (CC BY 4.0).
 - Keycaps e referência do PG1316S: [mikefive](https://github.com/mikeholscher/zmk-config-mikefive), de Mike Holscher. Uso permitido com crédito ao autor.
-- Footprint do switch: desenhado a partir da ficha técnica da Kailh (CPG1316S01D02). As posições dos contactos foram confirmadas com o [Delta Omega](https://github.com/unspecworks/delta-omega), de unspecworks (CERN-OHL-W-2.0).
+- Footprint do switch: desenhado a partir da ficha técnica da Kailh (CPG1316S01D02). As posições dos contactos foram comparadas com o [Delta Omega](https://github.com/unspecworks/delta-omega), de unspecworks (CERN-OHL-W-2.0), e com o [ULK](https://github.com/Goga64/ULK), de Georgii Miakishev (MIT), um Corne com PG1316S já construído.
 - Lojas de PG1316S indicadas pelo Delta Omega (não verificadas): Modulo Industries (EUA), Holykeebs (EUA) e Keycapsss (UE).
 - Layout: Corne (crkbd), de foostan (MIT).
 - Este projeto: CC BY 4.0, exceto as keycaps, que seguem as condições do autor.
