@@ -1,8 +1,10 @@
 """Gera uma PCB reversível no formato Corne (3x6 + 3 polegares) para switches
 ultrafinos Kailh PG1316S. O footprint do switch é desenhado aqui a partir da
 ficha técnica da Kailh (CPG1316S01D02); díodos, XIAO reversível e interruptor de
-energia vêm da PCB do dust. Versão sem fios (XIAO BLE): o conector JST-XH da
-bateria e o furo para os fios são acrescentados depois por finalizar_pcb.py. Uso:
+energia vêm da PCB do dust. Cada tecla tem um LED RGB (WS2812B-2020) na cavidade do
+switch, com um segundo interruptor para lhes cortar a alimentação. Versão sem fios
+(XIAO BLE): o conector JST-XH da bateria e o furo para os fios são acrescentados
+depois por finalizar_pcb.py. Uso:
 
     python gerar_pcb.py <caminho/para/dust.kicad_pcb>
 
@@ -32,11 +34,17 @@ STAGGER_U = [0.375, 0.375, 0.125, 0.0, 0.125, 0.25]
 X0, Y0 = 100.0, 100.0
 ROWS = ['r3', 'r2', 'r1']  # topo, home, baixo (r0 = polegares), como no dust
 CAP = (16.5, 16.5)  # keycaps do mikefive (para checagem de colisão)
-# O díodo SMD fica na cavidade por baixo do switch (y -3,9..-1,15 mm, |x| <= 2,2 mm nos dois lados)
-DIODE_DY = -2.525
+# O LED fica na cavidade por baixo do switch (y -3,9..-1,15 mm, |x| <= 2,2 mm), que é a
+# janela de LED da ficha técnica. O díodo passa para o intervalo entre colunas, na face
+# oposta à do switch (os pads existem nas duas faces; solda-se só na face de baixo).
+LED_DY = -2.525
+DIODE_DX = 8.5
 
-# XIAO: pino do dust -> pino desta placa (D0..D5 = colunas, D6 = tx, D7..D10 = linhas)
-XIAO_NETS = {'c4': 'c5', 'c3': 'c4', 'c2': 'c3', 'c1': 'c2', 'c0': 'c1', 'D5': 'c0'}
+# XIAO: pino do dust -> pino desta placa (D0..D5 = colunas, D6 = dados dos LEDs, D7..D10 = linhas)
+XIAO_NETS = {'c4': 'c5', 'c3': 'c4', 'c2': 'c3', 'c1': 'c2', 'c0': 'c1', 'D5': 'c0', 'tx': 'rgb0'}
+# Ordem da cadeia de LEDs: polegares, depois as colunas em serpentina da interna (c5) para a externa
+LED_ORDER = [(5, 'r0'), (4, 'r0'), (3, 'r0')] + [
+    (c, r) for i, c in enumerate(range(5, -1, -1)) for r in (['r1', 'r2', 'r3'] if i % 2 == 0 else ['r3', 'r2', 'r1'])]
 
 
 def rot(x, y, a):
@@ -155,6 +163,25 @@ SWITCH_FP = """(footprint "corne:Kailh_PG1316S_reversible" (layer "F.Cu") (tedit
   (pad "" np_thru_hole circle (at -5.8 -2.75) (size 1.25 1.25) (drill 1.25) (layers *.Cu *.Mask) (tstamp X))
 )"""
 
+# LED RGB endereçável WS2812B-2020 (2 x 2 x 0,84 mm), pads da biblioteca do KiCad, nas duas
+# faces (espelhado no verso). Pinos: 1 DOUT, 2 GND, 3 DIN, 4 VDD.
+LED_FP = """(footprint "corne:WS2812B-2020_reversible" (layer "F.Cu") (tedit 0) (tstamp X)
+  (at 0 0)
+  (attr smd)
+  (fp_text reference "L0" (at 0 -1.6) (layer "F.Fab") hide (effects (font (size 0.5 0.5) (thickness 0.08))) (tstamp X))
+  (fp_text value "WS2812B-2020" (at 0 1.6) (layer "F.Fab") hide (effects (font (size 0.5 0.5) (thickness 0.08))) (tstamp X))
+  (fp_rect (start -1 -1) (end 1 1) (layer "F.Fab") (width 0.1) (fill none) (tstamp X))
+  (fp_rect (start -1 -1) (end 1 1) (layer "B.Fab") (width 0.1) (fill none) (tstamp X))
+  (pad "1" smd rect (at -0.915 -0.55) (size 0.7 0.7) (layers "F.Cu" "F.Paste" "F.Mask") (net 1 "x") (tstamp X))
+  (pad "2" smd rect (at -0.915 0.55) (size 0.7 0.7) (layers "F.Cu" "F.Paste" "F.Mask") (net 1 "x") (tstamp X))
+  (pad "3" smd rect (at 0.915 0.55) (size 0.7 0.7) (layers "F.Cu" "F.Paste" "F.Mask") (net 1 "x") (tstamp X))
+  (pad "4" smd rect (at 0.915 -0.55) (size 0.7 0.7) (layers "F.Cu" "F.Paste" "F.Mask") (net 1 "x") (tstamp X))
+  (pad "1" smd rect (at 0.915 -0.55) (size 0.7 0.7) (layers "B.Cu" "B.Paste" "B.Mask") (net 1 "x") (tstamp X))
+  (pad "2" smd rect (at 0.915 0.55) (size 0.7 0.7) (layers "B.Cu" "B.Paste" "B.Mask") (net 1 "x") (tstamp X))
+  (pad "3" smd rect (at -0.915 0.55) (size 0.7 0.7) (layers "B.Cu" "B.Paste" "B.Mask") (net 1 "x") (tstamp X))
+  (pad "4" smd rect (at -0.915 -0.55) (size 0.7 0.7) (layers "B.Cu" "B.Paste" "B.Mask") (net 1 "x") (tstamp X))
+)"""
+
 
 def templates(dust):
     def ref(fp):
@@ -165,7 +192,8 @@ def templates(dust):
     by_ref = {(ref(f), find(f, 'layer')[0][1]): f for f in fps}
     return dict(
         switch=parse(SWITCH_FP),
-        # díodo do dust só com os pads SMD (frente e verso): cabe na cavidade do switch
+        led=parse(LED_FP),
+        # díodo do dust só com os pads SMD (frente e verso)
         diode=[c for c in by_ref[('D1', '"F.Cu"')]
                if not (isinstance(c, list) and c[0] == 'pad' and c[2] == 'thru_hole')],
         # bloco de eletrónica (XIAO e interruptor de energia), frente e verso
@@ -210,20 +238,34 @@ def main(dust_path):
         k['net'] = name
         board.place(tpl['switch'], k['x'], k['y'], k['a'], f'S{i}',
                     lambda pad, old, k=k: f"c{k['col']}" if pad == '1' else k['net'])
-        dx, dy = rot(0, DIODE_DY, k['a'])
-        board.place(tpl['diode'], k['x'] + dx, k['y'] + dy, 180 + k['a'], f'D{i}',
+        # o último polegar não tem nada à direita: o díodo fica entre ele e o anterior
+        side = -1 if (k['col'], k['row']) == (5, 'r0') else 1
+        dx, dy = rot(side * DIODE_DX, 0, k['a'])
+        board.place(tpl['diode'], k['x'] + dx, k['y'] + dy, 90 + k['a'], f'D{i}',
                     lambda pad, old, k=k: k['row'] if pad == '1' else k['net'])
+
+    # LEDs: DIN do anterior na cadeia, DOUT para o seguinte
+    for n, (c, r) in enumerate(LED_ORDER):
+        i, k = next((i, k) for i, k in enumerate(keys, 1) if k['col'] == c and k['row'] == r)
+        dx, dy = rot(0, LED_DY, k['a'])
+        pins = {'1': f'rgb{n + 1}', '2': 'GND', '3': f'rgb{n}', '4': 'VLED'}
+        board.place(tpl['led'], k['x'] + dx, k['y'] + dy, k['a'], f'L{i}', lambda pad, old, p=pins: p[pad])
 
     # Bloco de eletrónica: mesma posição relativa à coluna interna que no dust
     inner_top = next(k for k in keys if k['col'] == 5 and k['row'] == 'r3')
     ox, oy = inner_top['x'] - 237.83833, inner_top['y'] - 98.948154
-    refs = {'T1': 'PWR1'}
-    for f in tpl['cluster']:
+    # O interruptor dos LEDs (RGB1) é uma cópia do de energia, 9 mm acima, na mesma borda:
+    # liga o BAT+ ao VLED (o de energia liga o BAT- ao GND)
+    copies = [(f, 'PWR1', 0.0, {}) for f in tpl['cluster']]
+    copies += [(f, 'RGB1', -9.0, {'BAT-': 'VLED', 'GND': 'BAT'}) for f in tpl['cluster']
+               if any(c[1] == 'reference' and c[2] == '"T1"' for c in find(f, 'fp_text'))]
+    for f, new_ref, dy, remap in copies:
         at = find(f, 'at')[0]
         r = [c for c in find(f, 'fp_text') if c[1] == 'reference']
         old = r[0][2].strip('"') if r else ''
-        board.place(f, float(at[1]) + ox, float(at[2]) + oy, None, refs.get(old),
-                    lambda pad, net: XIAO_NETS.get(net, net) if old == 'XIAO1' else net)
+        board.place(f, float(at[1]) + ox, float(at[2]) + oy + dy, None, new_ref if old == 'T1' else None,
+                    lambda pad, net, old=old, remap=remap:
+                    XIAO_NETS.get(net, net) if old == 'XIAO1' else remap.get(net, net))
         if old == 'T1' and find(f, 'layer')[0][1] == '"B.Cu"':
             # as duas cópias do interruptor (frente/verso) partilham os furos: só a da frente os leva
             fp = board.footprints[-1]
@@ -253,7 +295,7 @@ def main(dust_path):
         # o USB-C do XIAO fica 0,37 mm fora da borda de propósito (como no dust)
         if not (shape.buffer(0.5) if r == '"XIAO1"' else edge).contains(h):
             problems.append(f'{r} sai fora do contorno ({h.difference(edge).area:.2f} mm²)')
-        if not r.startswith(('"S', '"D')):
+        if not r.startswith(('"S', '"D', '"L')):
             for i, cap in enumerate(caps):
                 if cap.intersection(h).area > 0.5:
                     problems.append(f'{r} fica debaixo do keycap S{i + 1}')
@@ -274,7 +316,7 @@ def main(dust_path):
     pp[:] = [c for c in pp if not (isinstance(c, list) and c[0] == 'outputdirectory')]
     body = [
         ['general', ['thickness', '1.6']], ['paper', '"A3"'],
-        ['title_block', ['title', '"corne-pg1316s"'], ['rev', '"v0.3"'], ['company', '"baseado no dust (Jason Hazel) e no mikefive (Mike Holscher)"']],
+        ['title_block', ['title', '"corne-pg1316s"'], ['rev', '"v0.4"'], ['company', '"baseado no dust (Jason Hazel) e no mikefive (Mike Holscher)"']],
         find(dust, 'layers')[0], setup,
     ] + [['net', str(i), f'"{n}"'] for i, n in enumerate(board.nets)] + board.footprints + gr
     out = '(kicad_pcb (version 20211014) (generator pcbnew)\n'

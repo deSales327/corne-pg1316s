@@ -68,8 +68,8 @@ def set_rules(board):
 # Exceções só para a geometria interna dos footprints herdados do dust (o dust foi
 # fabricado e montado com eles); pistas e zonas continuam sujeitas às regras normais.
 DRU = """(version 1)
-(rule "Kailh X + diodo: furos e pads do proprio footprint"
-  (condition "(A.memberOfFootprint('S*') || A.memberOfFootprint('D*')) && (B.memberOfFootprint('S*') || B.memberOfFootprint('D*'))")
+(rule "switch + diodo + LED: furos e pads do proprio footprint"
+  (condition "(A.memberOfFootprint('S*') || A.memberOfFootprint('D*') || A.memberOfFootprint('L*')) && (B.memberOfFootprint('S*') || B.memberOfFootprint('D*') || B.memberOfFootprint('L*'))")
   (constraint hole_clearance (min 0.1mm))
   (constraint edge_clearance (min 0.1mm)))
 """
