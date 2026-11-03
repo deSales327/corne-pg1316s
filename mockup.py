@@ -48,37 +48,38 @@ def board_data():
     return ring, parts
 
 
-def keycap(x, y, a, label, kind):
-    fill = {'alpha': 'url(#capA)', 'mod': 'url(#capM)', 'thumb': 'url(#capT)'}[kind]
-    ink = '#f7f3ea' if kind == 'thumb' else '#2b2b2b'
-    size = 3.4 if len(label) <= 1 else 2.3
+def keycap(x, y, a, label, hue):
+    """Keycap transparente (Kailh PG1316 "Clear") com o LED RGB aceso por baixo."""
     return f'''<g transform="translate({x:.3f} {y:.3f}) rotate({-a:.2f})">
-  <rect x="-8.25" y="-8.25" width="16.5" height="16.5" rx="2.4" fill="#000" opacity=".35" filter="url(#soft)" transform="translate(.6 1.1)"/>
-  <rect x="-8.25" y="-8.25" width="16.5" height="16.5" rx="2.4" fill="{fill}" stroke="#00000055" stroke-width=".25"/>
-  <rect x="-7.6" y="-7.5" width="15.2" height="14.2" rx="1.6" fill="#ffffff" opacity=".10"/>
-  <text x="0" y="{size * .35:.2f}" font-size="{size}" fill="{ink}" text-anchor="middle" font-weight="600">{label}</text>
+  <rect x="-8" y="-8" width="16" height="16" rx="2" fill="#000" opacity=".3" filter="url(#soft)" transform="translate(.6 1.1)"/>
+  <circle cx="0" cy="-2.5" r="7.5" fill="hsl({hue:.0f},100%,60%)" opacity=".85" filter="url(#glow)"/>
+  <rect x="-8" y="-8" width="16" height="16" rx="2" fill="#ffffff" fill-opacity=".38" stroke="#ffffff99" stroke-width=".3"/>
+  <rect x="-7.3" y="-7.3" width="14.6" height="13.6" rx="1.5" fill="#ffffff" opacity=".12"/>
+  <circle cx="0" cy="-2.5" r="1.6" fill="hsl({hue:.0f},100%,85%)" opacity=".9" filter="url(#soft)"/>
+  <text x="0" y="{(3.4 if len(label) <= 1 else 2.3) * .35 + 2:.2f}" font-size="{3.4 if len(label) <= 1 else 2.3}" fill="#1e1e1e" fill-opacity=".8" text-anchor="middle" font-weight="600">{label}</text>
 </g>'''
 
 
-def xiao(x, y):
-    pads = ''.join(
-        f'<rect x="{sx:.2f}" y="{-7.62 + i * 2.54 - .7:.2f}" width="1.6" height="1.4" rx=".3" fill="url(#gold)"/>'
-        f'<circle cx="{sx + (.0 if sx < 0 else 1.6):.2f}" cy="{-7.62 + i * 2.54:.2f}" r=".5" fill="#151515"/>'
-        for i in range(7) for sx in (-8.9, 7.3))
+def controller(x, y, header_dy):
+    """nice!nano (por baixo, só se veem as filas de pinos e o USB) com o nice!view por cima."""
+    pads = ''.join(f'<circle cx="{sx:.2f}" cy="{-13.97 + i * 2.54:.2f}" r=".75" fill="url(#gold)"/>'
+                   for i in range(12) for sx in (-7.62, 7.62))
+    top = header_dy - 34.4
     return f'''<g transform="translate({x:.3f} {y:.3f})">
-  <rect x="-8.9" y="-10.5" width="17.8" height="21" rx="1.2" fill="#000" opacity=".5" filter="url(#soft)" transform="translate(.5 1)"/>
-  <rect x="-8.9" y="-10.5" width="17.8" height="21" rx="1.2" fill="#1d1f22" stroke="#3a3d42" stroke-width=".2"/>
+  <rect x="-9" y="-16.5" width="18" height="33" rx=".8" fill="#000" opacity=".5" filter="url(#soft)" transform="translate(.5 1)"/>
+  <rect x="-9" y="-16.5" width="18" height="33" rx=".8" fill="#14161a" stroke="#3a3d42" stroke-width=".2"/>
+  <rect x="-4.5" y="-17.7" width="9" height="3.6" rx="1.2" fill="url(#steel)" stroke="#777" stroke-width=".15"/>
   {pads}
-  <rect x="-4.5" y="-12.1" width="9" height="5.6" rx="1.3" fill="url(#steel)" stroke="#777" stroke-width=".15"/>
-  <rect x="-3.4" y="-11.5" width="6.8" height="1.6" rx=".8" fill="#2a2a2a"/>
-  <rect x="-6.3" y="-3.6" width="12.6" height="11.6" rx=".5" fill="url(#steel)" stroke="#8a8a8a" stroke-width=".15"/>
-  <rect x="-5.6" y="-2.9" width="11.2" height="10.2" rx=".3" fill="none" stroke="#ffffff88" stroke-width=".15"/>
-  <text x="0" y="2" font-size="1.25" fill="#555" text-anchor="middle" font-weight="600">nRF52840</text>
-  <text x="0" y="3.7" font-size=".9" fill="#666" text-anchor="middle">Seeed Studio</text>
-  <rect x="5" y="-6.2" width="1.8" height="1.4" rx=".3" fill="#d9d9d9"/><circle cx="5.9" cy="-5.5" r=".4" fill="#999"/>
-  <rect x="-1.5" y="-5.6" width="1" height=".7" fill="#7cfc9a"/><rect x=".5" y="-5.6" width="1" height=".7" fill="#ff6b6b"/>
-  <rect x="-7.2" y="-6.4" width="2.4" height="2" rx=".3" fill="#2a2a2a"/>
-  <text x="0" y="9.6" font-size="1.4" fill="#cfcfcf" text-anchor="middle" font-weight="700">XIAO</text>
+  <rect x="-7" y="{top:.2f}" width="14" height="36" rx="1" fill="#000" opacity=".5" filter="url(#soft)" transform="translate(.6 1.2)"/>
+  <rect x="-7" y="{top:.2f}" width="14" height="36" rx="1" fill="#1b1b1d" stroke="#444" stroke-width=".2"/>
+  <rect x="-6" y="{top + 4.2:.2f}" width="12" height="27.5" rx=".3" fill="#cfd3c8"/>
+  <text x="0" y="{top + 9:.2f}" font-size="2.4" fill="#222" text-anchor="middle" font-weight="700">87%</text>
+  <rect x="-3.2" y="{top + 10.2:.2f}" width="6.4" height="2.6" rx=".4" fill="none" stroke="#222" stroke-width=".35"/>
+  <rect x="-2.8" y="{top + 10.6:.2f}" width="4.8" height="1.8" fill="#222"/>
+  <text x="0" y="{top + 18:.2f}" font-size="2" fill="#222" text-anchor="middle" font-weight="700">BT 1</text>
+  <circle cx="0" cy="{top + 22.5:.2f}" r="2" fill="#222"/><text x="0" y="{top + 23.2:.2f}" font-size="1.8" fill="#cfd3c8" text-anchor="middle" font-weight="700">1</text>
+  <text x="0" y="{top + 29:.2f}" font-size="1.7" fill="#222" text-anchor="middle" font-weight="600">BASE</text>
+  <text x="0" y="{top + 34.6:.2f}" font-size="1.1" fill="#999" text-anchor="middle">nice!view</text>
 </g>'''
 
 
@@ -95,16 +96,23 @@ def slide_switch(x, y):
 </g>'''
 
 
-def xh(x, y, hx, hy):
-    """JST-XH vertical com a ficha da bateria encaixada; (x, y) é o pino 1, (hx, hy) o furo dos fios."""
+def xh(x, y, hx, hy, s):
+    """JST-XH vertical rodado 90° com a ficha da bateria; (x, y) é o pino 1 (o pino 2 fica 2,5 mm
+    acima), (hx, hy) o furo dos fios, s = 1 na metade esquerda e -1 na direita (espelhada)."""
+    bx = x - 2.35 if s > 0 else x - 3.4
     return f'''<g>
-  <rect x="{x - 2.45:.3f}" y="{y - 2.35:.3f}" width="7.4" height="5.75" rx=".4" fill="#000" opacity=".4" filter="url(#soft)" transform="translate(.4 .8)"/>
-  <rect x="{x - 2.45:.3f}" y="{y - 2.35:.3f}" width="7.4" height="5.75" rx=".4" fill="#f3efe4" stroke="#b9b2a2" stroke-width=".15"/>
-  <rect x="{x - 1.6:.3f}" y="{y - 1.5:.3f}" width="5.7" height="3.6" rx=".3" fill="#e4ddcc"/>
-  <path d="M{x:.3f} {y:.3f} C {x + 1:.3f} {y + 5:.3f}, {hx - 3:.3f} {hy + 3:.3f}, {hx - .4:.3f} {hy:.3f}" stroke="#c62828" stroke-width=".7" fill="none" stroke-linecap="round"/>
-  <path d="M{x + 2.5:.3f} {y:.3f} C {x + 3.5:.3f} {y + 4:.3f}, {hx - 2:.3f} {hy + 2:.3f}, {hx + .4:.3f} {hy:.3f}" stroke="#1b1b1b" stroke-width=".7" fill="none" stroke-linecap="round"/>
-  <circle cx="{x:.3f}" cy="{y:.3f}" r=".55" fill="url(#gold)"/><circle cx="{x + 2.5:.3f}" cy="{y:.3f}" r=".55" fill="url(#gold)"/>
+  <rect x="{bx:.3f}" y="{y - 4.95:.3f}" width="5.75" height="7.4" rx=".4" fill="#000" opacity=".4" filter="url(#soft)" transform="translate(.4 .8)"/>
+  <rect x="{bx:.3f}" y="{y - 4.95:.3f}" width="5.75" height="7.4" rx=".4" fill="#f3efe4" stroke="#b9b2a2" stroke-width=".15"/>
+  <rect x="{bx + .85:.3f}" y="{y - 4.1:.3f}" width="3.6" height="5.7" rx=".3" fill="#e4ddcc"/>
+  <path d="M{x:.3f} {y:.3f} C {x:.3f} {y + 3:.3f}, {hx:.3f} {hy - 3:.3f}, {hx - .4 * s:.3f} {hy:.3f}" stroke="#c62828" stroke-width=".7" fill="none" stroke-linecap="round"/>
+  <path d="M{x + .8 * s:.3f} {y - 2.5:.3f} C {x + 2.5 * s:.3f} {y + 1:.3f}, {hx + 1 * s:.3f} {hy - 3:.3f}, {hx + .4 * s:.3f} {hy:.3f}" stroke="#1b1b1b" stroke-width=".7" fill="none" stroke-linecap="round"/>
+  <circle cx="{x:.3f}" cy="{y:.3f}" r=".55" fill="url(#gold)"/><circle cx="{x:.3f}" cy="{y - 2.5:.3f}" r=".55" fill="url(#gold)"/>
 </g>'''
+
+
+def reset_button(x, y):
+    return (f'<rect x="{x - 1.25:.3f}" y="{y - 1.5:.3f}" width="2.5" height="3" rx=".3" fill="url(#steel)" stroke="#666" stroke-width=".15"/>'
+            f'<circle cx="{x:.3f}" cy="{y:.3f}" r=".7" fill="#2a2a2a"/>')
 
 
 def half(side, ring, parts, keys, mirror_x):
@@ -118,22 +126,26 @@ def half(side, ring, parts, keys, mirror_x):
     out = [f'<polygon points="{pts}" fill="#000" opacity=".55" filter="url(#shadow)" transform="translate(1.5 3)"/>',
            f'<polygon points="{pts}" fill="url(#pcb)" stroke="#c9a227" stroke-width=".35"/>',
            f'<polygon points="{pts}" fill="none" stroke="#ffffff22" stroke-width=".2" transform="translate(-.15 -.15)"/>']
-    # parafusos/furos decorativos e silkscreen
-    xx, xy, _ = parts['XIAO1']
-    out.append(f'<text x="{X(xx - 1.5):.2f}" y="{xy + 27.9:.2f}" font-size="1.5" fill="#efe6ff" text-anchor="middle" '
+    # silkscreen, controlador + nice!view, bateria, interruptor e reset
+    mx, my, _ = parts['MCU1']
+    out.append(f'<text x="{X(mx - .5):.2f}" y="{my + 24.4:.2f}" font-size="1.5" fill="#efe6ff" text-anchor="middle" '
                f'font-weight="700" letter-spacing=".2">corne-pg1316s</text>')
-    out.append(xiao(X(xx), xy))
+    _, dy, _ = parts['DISP1']
+    out.append(controller(X(mx), my, dy - my + (2.54 if side == 'R' else 0)))
     jx, jy, _ = parts['J1']
     hx, hy, _ = parts['H1']
     out.append(hole(X(hx), hy))
-    out.append(xh(X(jx) - (2.5 if side == 'R' else 0), jy, X(hx), hy))
+    out.append(xh(X(jx), jy, X(hx), hy, 1 if side == 'L' else -1))
     sx, sy, _ = parts['PWR1']
     out.append(slide_switch(X(sx), sy) if side == 'L'
                else f'<g transform="translate({X(sx):.3f} 0) scale(-1 1)">{slide_switch(0, sy)}</g>')
+    rx, ry, _ = parts['RST1']
+    out.append(reset_button(X(rx), ry))
+    x0, x1 = min(X(x) for x, _ in ring), max(X(x) for x, _ in ring)
     for k in keys:
         label = LEGENDS[side][ROW_INDEX[k['row']]][k['col']]
-        kind = 'thumb' if k['row'] == 'r0' else ('mod' if k['col'] == 0 else 'alpha')
-        out.append(keycap(X(k['x']), k['y'], A(k['a']), label, kind))
+        hue = (X(k['x']) - x0) / (x1 - x0) * 150 + (0 if side == 'L' else 150)
+        out.append(keycap(X(k['x']), k['y'], A(k['a']), label, hue))
     return '\n'.join(out)
 
 
@@ -161,13 +173,14 @@ def main():
   <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f5d77a"/><stop offset="1" stop-color="#b8902c"/></linearGradient>
   <linearGradient id="steel" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f2f2f2"/><stop offset=".5" stop-color="#b5b5b5"/><stop offset="1" stop-color="#8c8c8c"/></linearGradient>
   <filter id="soft" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation=".5"/></filter>
+  <filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="2.2"/></filter>
   <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%"><feGaussianBlur stdDeviation="1.6"/></filter>
 </defs>
 <rect x="{vx:.2f}" y="{vy:.2f}" width="{vw:.2f}" height="{vh:.2f}" fill="url(#desk)"/>
 {left}
 {right}
 <text x="{vx + 8:.2f}" y="{vy + vh - 7:.2f}" font-size="4" fill="#3b3631" font-weight="700">corne-pg1316s</text>
-<text x="{vx + 44:.2f}" y="{vy + vh - 7:.2f}" font-size="2.6" fill="#5b554d">42 teclas · Kailh PG1316S · keycaps do mikefive (impressas em 3D) · Seeed XIAO nRF52840 (BLE, sem fios) · bateria LiPo por baixo · PCB reversível · mockup ilustrativo</text>
+<text x="{vx + 44:.2f}" y="{vy + vh - 7:.2f}" font-size="2.6" fill="#5b554d">42 teclas · Kailh PG1316S · LED RGB por tecla · keycaps Kailh transparentes · nice!nano + nice!view (BLE, sem fios) · bateria LiPo por baixo · PCB reversível · mockup ilustrativo</text>
 </svg>'''
     with open(os.path.join(HERE, 'mockup.svg'), 'w', encoding='utf8') as f:
         f.write(svg)

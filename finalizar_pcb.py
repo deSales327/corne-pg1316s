@@ -1,5 +1,5 @@
-"""Segunda fase: acrescenta o conector da bateria (JST-XH) e o furo para os fios,
-roteia com o Freerouting, enche o plano de GND, corre o DRC e exporta os gerbers.
+"""Segunda fase: acrescenta o conector da bateria (JST-XH), o furo para os fios e o
+botão de reset, roteia com o Freerouting, enche o plano de GND, corre o DRC e exporta os gerbers.
 
 Tem de correr com o Python do KiCad (10.x):
 
@@ -24,9 +24,10 @@ KICAD = os.path.dirname(os.path.dirname(sys.executable))
 LIB = glob.glob(os.path.join(KICAD, 'share', 'kicad', 'footprints'))[0]
 CLI = os.path.join(KICAD, 'bin', 'kicad-cli.exe')
 
-# Posições relativas ao centro do XIAO (mm): no espaço livre por baixo dele
-XH_PIN1 = (-5.5, 16.75)
-HOLE = (3.5, 17.25)
+# Posições relativas ao centro do controlador (mm), na faixa entre ele e a borda da direita
+XH_PIN1 = (12.0, -11.0)  # conector rodado 90°: o pino 2 fica 2,5 mm acima
+HOLE = (12.6, -4.5)
+RESET = (13.0, 11.0)
 
 
 def mm(x, y):
@@ -44,6 +45,7 @@ def net(board, name):
 def add_footprint(board, lib, name, ref, pos, nets=None):
     fp = pcbnew.FootprintLoad(os.path.join(LIB, lib + '.pretty'), name)
     fp.SetReference(ref)
+    fp.Reference().SetVisible(False)  # não há espaço para as referências junto à borda
     fp.SetPosition(mm(*pos))
     for pad in fp.Pads():
         if nets and pad.GetNumber() in nets:
@@ -117,19 +119,31 @@ def java():
     return found
 
 
+def add_parts(board):
+    # conector da bateria (furos passantes: serve nas duas faces da placa reversível)
+    mcu = board.FindFootprintByReference('MCU1').GetPosition()
+    xx, xy = pcbnew.ToMM(mcu.x), pcbnew.ToMM(mcu.y)
+    j1 = add_footprint(board, 'Connector_JST', 'JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical', 'J1',
+                       (xx + XH_PIN1[0], xy + XH_PIN1[1]),
+                       {'1': 'BAT', '2': 'BAT-'})
+    j1.SetOrientationDegrees(90)
+    # furo não metalizado para passar os fios da bateria (que fica por baixo da placa)
+    add_footprint(board, 'MountingHole', 'MountingHole_3.2mm_M3', 'H1', (xx + HOLE[0], xy + HOLE[1]))
+    # botão de reset (SMD): uma cópia em cada face, solda-se só a da face de cima. As cópias
+    # precisam de referências diferentes: o Specctra identifica os componentes pela referência.
+    for flip in (False, True):
+        sw = add_footprint(board, 'Button_Switch_SMD', 'SW_SPST_B3U-1000P', 'RST2' if flip else 'RST1',
+                           (xx + RESET[0], xy + RESET[1]), {'1': 'RST', '2': 'GND'})
+        sw.SetOrientationDegrees(90)
+        if flip:
+            sw.Flip(sw.GetPosition(), pcbnew.FLIP_DIRECTION_LEFT_RIGHT)
+
+
 def main(jar):
     os.makedirs(BUILD, exist_ok=True)
     board = pcbnew.LoadBoard(PCB)
     set_rules(board)
-
-    # conector da bateria (furos passantes: serve nas duas faces da placa reversível)
-    xiao = board.FindFootprintByReference('XIAO1').GetPosition()
-    xx, xy = pcbnew.ToMM(xiao.x), pcbnew.ToMM(xiao.y)
-    add_footprint(board, 'Connector_JST', 'JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical', 'J1',
-                  (xx + XH_PIN1[0], xy + XH_PIN1[1]),
-                  {'1': 'BAT', '2': 'BAT-'})
-    # furo não metalizado para passar os fios da bateria (que fica por baixo da placa)
-    add_footprint(board, 'MountingHole', 'MountingHole_3.2mm_M3', 'H1', (xx + HOLE[0], xy + HOLE[1]))
+    add_parts(board)
     pcbnew.SaveBoard(PCB, board)
 
     # ---- autorouting
@@ -141,6 +155,11 @@ def main(jar):
     board = pcbnew.LoadBoard(PCB)
     if not pcbnew.ImportSpecctraSES(board, ses):
         sys.exit('falha a importar o SES')
+    # o Freerouting às vezes deixa troços minúsculos com 0,125 mm, abaixo do mínimo
+    min_w = board.GetDesignSettings().m_TrackMinWidth
+    for t in board.GetTracks():
+        if t.GetClass() == 'PCB_TRACK' and t.GetWidth() < min_w:
+            t.SetWidth(min_w)
     gnd_zones(board)
     pcbnew.SaveBoard(PCB, board)
     project_rules()

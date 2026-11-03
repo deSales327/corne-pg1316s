@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="77.50 69.50 325.10 125.85"
-     width="2016" height="780" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="77.50 69.50 331.00 125.85"
+     width="2052" height="780" font-family="Segoe UI, Helvetica, Arial, sans-serif">
 <defs>
   <linearGradient id="desk" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d9d4cc"/><stop offset="1" stop-color="#b9b2a7"/></linearGradient>
   <linearGradient id="pcb" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5a2f91"/><stop offset="1" stop-color="#3d1d68"/></linearGradient>
@@ -9,325 +9,414 @@
   <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f5d77a"/><stop offset="1" stop-color="#b8902c"/></linearGradient>
   <linearGradient id="steel" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f2f2f2"/><stop offset=".5" stop-color="#b5b5b5"/><stop offset="1" stop-color="#8c8c8c"/></linearGradient>
   <filter id="soft" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation=".5"/></filter>
+  <filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="2.2"/></filter>
   <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%"><feGaussianBlur stdDeviation="1.6"/></filter>
 </defs>
-<rect x="77.50" y="69.50" width="325.10" height="125.85" fill="url(#desk)"/>
-<polygon points="91.500,99.375 91.500,147.375 91.565,147.810 91.677,148.082 91.840,148.327 92.167,148.622 92.565,148.810 93.000,148.875 124.806,148.868 125.230,148.762 125.606,148.539 125.814,148.334 126.207,147.773 126.738,147.147 127.330,146.579 127.977,146.074 128.672,145.638 129.409,145.276 130.178,144.991 130.897,144.803 131.708,144.673 132.585,144.625 142.088,144.618 142.378,144.560 142.651,144.446 143.691,143.709 144.395,143.318 145.070,143.025 145.702,142.814 146.486,142.630 147.215,142.532 147.899,142.501 151.482,142.500 152.321,142.544 153.096,142.663 153.787,142.836 154.527,143.097 155.238,143.429 155.974,143.870 156.602,144.341 157.130,144.818 157.659,145.398 158.130,146.026 158.536,146.697 158.903,147.473 159.164,148.213 159.352,148.976 159.463,149.753 159.499,150.482 159.507,161.272 159.614,161.699 159.753,161.958 159.939,162.186 160.293,162.448 160.565,162.560 161.000,162.625 175.463,162.626 176.111,162.654 176.804,162.742 177.533,162.902 192.371,166.878 193.082,167.104 193.726,167.374 194.330,167.689 207.391,175.222 207.814,175.342 208.108,175.352 208.398,175.304 208.674,175.201 208.923,175.045 209.229,174.729 216.858,161.531 216.986,161.244 217.051,160.936 217.001,103.499 216.937,103.063 216.824,102.792 216.660,102.548 216.334,102.252 215.937,102.065 215.501,102.000 201.317,102.000 200.578,101.966 199.828,101.862 199.024,101.668 198.375,101.445 197.684,101.135 196.966,100.723 196.406,100.327 195.830,99.836 195.256,99.240 194.788,98.645 194.414,98.070 194.060,97.401 193.701,96.549 193.538,96.303 193.211,96.005 192.812,95.815 192.374,95.750 181.933,95.750 181.147,95.711 180.486,95.620 179.769,95.455 179.005,95.200 178.333,94.901 177.750,94.578 176.651,93.804 176.378,93.690 176.088,93.632 164.933,93.625 164.147,93.586 163.486,93.495 162.769,93.330 162.005,93.075 161.333,92.776 160.750,92.453 159.651,91.679 159.235,91.529 158.941,91.500 142.908,91.507 142.621,91.564 142.351,91.675 141.771,92.105 141.133,92.522 140.315,92.941 139.603,93.216 138.793,93.438 137.963,93.575 137.064,93.625 126.340,93.625 126.049,93.653 125.637,93.800 125.394,93.961 125.186,94.166 124.793,94.727 124.315,95.297 123.728,95.871 123.086,96.382 122.395,96.824 121.662,97.193 120.895,97.485 120.103,97.697 119.216,97.835 118.415,97.875 93.000,97.875 92.707,97.904 92.426,97.989 92.167,98.128 91.939,98.314 91.753,98.542 91.614,98.801 91.529,99.082" fill="#000" opacity=".55" filter="url(#shadow)" transform="translate(1.5 3)"/>
-<polygon points="91.500,99.375 91.500,147.375 91.565,147.810 91.677,148.082 91.840,148.327 92.167,148.622 92.565,148.810 93.000,148.875 124.806,148.868 125.230,148.762 125.606,148.539 125.814,148.334 126.207,147.773 126.738,147.147 127.330,146.579 127.977,146.074 128.672,145.638 129.409,145.276 130.178,144.991 130.897,144.803 131.708,144.673 132.585,144.625 142.088,144.618 142.378,144.560 142.651,144.446 143.691,143.709 144.395,143.318 145.070,143.025 145.702,142.814 146.486,142.630 147.215,142.532 147.899,142.501 151.482,142.500 152.321,142.544 153.096,142.663 153.787,142.836 154.527,143.097 155.238,143.429 155.974,143.870 156.602,144.341 157.130,144.818 157.659,145.398 158.130,146.026 158.536,146.697 158.903,147.473 159.164,148.213 159.352,148.976 159.463,149.753 159.499,150.482 159.507,161.272 159.614,161.699 159.753,161.958 159.939,162.186 160.293,162.448 160.565,162.560 161.000,162.625 175.463,162.626 176.111,162.654 176.804,162.742 177.533,162.902 192.371,166.878 193.082,167.104 193.726,167.374 194.330,167.689 207.391,175.222 207.814,175.342 208.108,175.352 208.398,175.304 208.674,175.201 208.923,175.045 209.229,174.729 216.858,161.531 216.986,161.244 217.051,160.936 217.001,103.499 216.937,103.063 216.824,102.792 216.660,102.548 216.334,102.252 215.937,102.065 215.501,102.000 201.317,102.000 200.578,101.966 199.828,101.862 199.024,101.668 198.375,101.445 197.684,101.135 196.966,100.723 196.406,100.327 195.830,99.836 195.256,99.240 194.788,98.645 194.414,98.070 194.060,97.401 193.701,96.549 193.538,96.303 193.211,96.005 192.812,95.815 192.374,95.750 181.933,95.750 181.147,95.711 180.486,95.620 179.769,95.455 179.005,95.200 178.333,94.901 177.750,94.578 176.651,93.804 176.378,93.690 176.088,93.632 164.933,93.625 164.147,93.586 163.486,93.495 162.769,93.330 162.005,93.075 161.333,92.776 160.750,92.453 159.651,91.679 159.235,91.529 158.941,91.500 142.908,91.507 142.621,91.564 142.351,91.675 141.771,92.105 141.133,92.522 140.315,92.941 139.603,93.216 138.793,93.438 137.963,93.575 137.064,93.625 126.340,93.625 126.049,93.653 125.637,93.800 125.394,93.961 125.186,94.166 124.793,94.727 124.315,95.297 123.728,95.871 123.086,96.382 122.395,96.824 121.662,97.193 120.895,97.485 120.103,97.697 119.216,97.835 118.415,97.875 93.000,97.875 92.707,97.904 92.426,97.989 92.167,98.128 91.939,98.314 91.753,98.542 91.614,98.801 91.529,99.082" fill="url(#pcb)" stroke="#c9a227" stroke-width=".35"/>
-<polygon points="91.500,99.375 91.500,147.375 91.565,147.810 91.677,148.082 91.840,148.327 92.167,148.622 92.565,148.810 93.000,148.875 124.806,148.868 125.230,148.762 125.606,148.539 125.814,148.334 126.207,147.773 126.738,147.147 127.330,146.579 127.977,146.074 128.672,145.638 129.409,145.276 130.178,144.991 130.897,144.803 131.708,144.673 132.585,144.625 142.088,144.618 142.378,144.560 142.651,144.446 143.691,143.709 144.395,143.318 145.070,143.025 145.702,142.814 146.486,142.630 147.215,142.532 147.899,142.501 151.482,142.500 152.321,142.544 153.096,142.663 153.787,142.836 154.527,143.097 155.238,143.429 155.974,143.870 156.602,144.341 157.130,144.818 157.659,145.398 158.130,146.026 158.536,146.697 158.903,147.473 159.164,148.213 159.352,148.976 159.463,149.753 159.499,150.482 159.507,161.272 159.614,161.699 159.753,161.958 159.939,162.186 160.293,162.448 160.565,162.560 161.000,162.625 175.463,162.626 176.111,162.654 176.804,162.742 177.533,162.902 192.371,166.878 193.082,167.104 193.726,167.374 194.330,167.689 207.391,175.222 207.814,175.342 208.108,175.352 208.398,175.304 208.674,175.201 208.923,175.045 209.229,174.729 216.858,161.531 216.986,161.244 217.051,160.936 217.001,103.499 216.937,103.063 216.824,102.792 216.660,102.548 216.334,102.252 215.937,102.065 215.501,102.000 201.317,102.000 200.578,101.966 199.828,101.862 199.024,101.668 198.375,101.445 197.684,101.135 196.966,100.723 196.406,100.327 195.830,99.836 195.256,99.240 194.788,98.645 194.414,98.070 194.060,97.401 193.701,96.549 193.538,96.303 193.211,96.005 192.812,95.815 192.374,95.750 181.933,95.750 181.147,95.711 180.486,95.620 179.769,95.455 179.005,95.200 178.333,94.901 177.750,94.578 176.651,93.804 176.378,93.690 176.088,93.632 164.933,93.625 164.147,93.586 163.486,93.495 162.769,93.330 162.005,93.075 161.333,92.776 160.750,92.453 159.651,91.679 159.235,91.529 158.941,91.500 142.908,91.507 142.621,91.564 142.351,91.675 141.771,92.105 141.133,92.522 140.315,92.941 139.603,93.216 138.793,93.438 137.963,93.575 137.064,93.625 126.340,93.625 126.049,93.653 125.637,93.800 125.394,93.961 125.186,94.166 124.793,94.727 124.315,95.297 123.728,95.871 123.086,96.382 122.395,96.824 121.662,97.193 120.895,97.485 120.103,97.697 119.216,97.835 118.415,97.875 93.000,97.875 92.707,97.904 92.426,97.989 92.167,98.128 91.939,98.314 91.753,98.542 91.614,98.801 91.529,99.082" fill="none" stroke="#ffffff22" stroke-width=".2" transform="translate(-.15 -.15)"/>
-<text x="203.50" y="141.65" font-size="1.5" fill="#efe6ff" text-anchor="middle" font-weight="700" letter-spacing=".2">corne-pg1316s</text>
-<g transform="translate(205.000 113.750)">
-  <rect x="-8.9" y="-10.5" width="17.8" height="21" rx="1.2" fill="#000" opacity=".5" filter="url(#soft)" transform="translate(.5 1)"/>
-  <rect x="-8.9" y="-10.5" width="17.8" height="21" rx="1.2" fill="#1d1f22" stroke="#3a3d42" stroke-width=".2"/>
-  <rect x="-8.90" y="-8.32" width="1.6" height="1.4" rx=".3" fill="url(#gold)"/><circle cx="-8.90" cy="-7.62" r=".5" fill="#151515"/><rect x="7.30" y="-8.32" width="1.6" height="1.4" rx=".3" fill="url(#gold)"/><circle cx="8.90" cy="-7.62" r=".5" fill="#151515"/><rect x="-8.90" y="-5.78" width="1.6" height="1.4" rx=".3" fill="url(#gold)"/><circle cx="-8.90" cy="-5.08" r=".5" fill="#151515"/><rect x="7.30" y="-5.78" width="1.6" height="1.4" rx=".3" fill="url(#gold)"/><circle cx="8.90" cy="-5.08" r=".5" fill="#151515"/><rect x="-8.90" y="-3.24" width="1.6" height="1.4" rx=".3" fill="url(#gold)"/><circle cx="-8.90" cy="-2.54" r=".5" fill="#151515"/><rect x="7.30" y="-3.24" width="1.6" height="1.4" rx=".3" fill="url(#gold)"/><circle cx="8.90" cy="-2.54" r=".5" fill="#151515"/><rect x="-8.90" y="-0.70" width="1.6" height="1.4" rx=".3" fill="url(#gold)"/><circle cx="-8.90" cy="0.00" r=".5" fill="#151515"/><rect x="7.30" y="-0.70" width="1.6" height="1.4" rx=".3" fill="url(#gold)"/><circle cx="8.90" cy="0.00" r=".5" fill="#151515"/><rect x="-8.90" y="1.84" width="1.6" height="1.4" rx=".3" fill="url(#gold)"/><circle cx="-8.90" cy="2.54" r=".5" fill="#151515"/><rect x="7.30" y="1.84" width="1.6" height="1.4" rx=".3" fill="url(#gold)"/><circle cx="8.90" cy="2.54" r=".5" fill="#151515"/><rect x="-8.90" y="4.38" width="1.6" height="1.4" rx=".3" fill="url(#gold)"/><circle cx="-8.90" cy="5.08" r=".5" fill="#151515"/><rect x="7.30" y="4.38" width="1.6" height="1.4" rx=".3" fill="url(#gold)"/><circle cx="8.90" cy="5.08" r=".5" fill="#151515"/><rect x="-8.90" y="6.92" width="1.6" height="1.4" rx=".3" fill="url(#gold)"/><circle cx="-8.90" cy="7.62" r=".5" fill="#151515"/><rect x="7.30" y="6.92" width="1.6" height="1.4" rx=".3" fill="url(#gold)"/><circle cx="8.90" cy="7.62" r=".5" fill="#151515"/>
-  <rect x="-4.5" y="-12.1" width="9" height="5.6" rx="1.3" fill="url(#steel)" stroke="#777" stroke-width=".15"/>
-  <rect x="-3.4" y="-11.5" width="6.8" height="1.6" rx=".8" fill="#2a2a2a"/>
-  <rect x="-6.3" y="-3.6" width="12.6" height="11.6" rx=".5" fill="url(#steel)" stroke="#8a8a8a" stroke-width=".15"/>
-  <rect x="-5.6" y="-2.9" width="11.2" height="10.2" rx=".3" fill="none" stroke="#ffffff88" stroke-width=".15"/>
-  <text x="0" y="2" font-size="1.25" fill="#555" text-anchor="middle" font-weight="600">nRF52840</text>
-  <text x="0" y="3.7" font-size=".9" fill="#666" text-anchor="middle">Seeed Studio</text>
-  <rect x="5" y="-6.2" width="1.8" height="1.4" rx=".3" fill="#d9d9d9"/><circle cx="5.9" cy="-5.5" r=".4" fill="#999"/>
-  <rect x="-1.5" y="-5.6" width="1" height=".7" fill="#7cfc9a"/><rect x=".5" y="-5.6" width="1" height=".7" fill="#ff6b6b"/>
-  <rect x="-7.2" y="-6.4" width="2.4" height="2" rx=".3" fill="#2a2a2a"/>
-  <text x="0" y="9.6" font-size="1.4" fill="#cfcfcf" text-anchor="middle" font-weight="700">XIAO</text>
+<rect x="77.50" y="69.50" width="331.00" height="125.85" fill="url(#desk)"/>
+<polygon points="91.500,99.375 91.500,147.375 91.565,147.810 91.677,148.082 91.840,148.327 92.167,148.622 92.565,148.810 93.000,148.875 124.806,148.868 125.230,148.762 125.606,148.539 125.814,148.334 126.207,147.773 126.738,147.147 127.330,146.579 127.977,146.074 128.672,145.638 129.409,145.276 130.178,144.991 130.897,144.803 131.708,144.673 132.585,144.625 142.088,144.618 142.378,144.560 142.651,144.446 143.691,143.709 144.395,143.318 145.070,143.025 145.702,142.814 146.486,142.630 147.215,142.532 147.899,142.501 151.482,142.500 152.321,142.544 153.096,142.663 153.787,142.836 154.527,143.097 155.238,143.429 155.974,143.870 156.602,144.341 157.130,144.818 157.659,145.398 158.130,146.026 158.536,146.697 158.903,147.473 159.164,148.213 159.352,148.976 159.463,149.753 159.499,150.482 159.507,161.272 159.614,161.699 159.753,161.958 159.939,162.186 160.293,162.448 160.565,162.560 161.000,162.625 175.463,162.626 176.111,162.654 176.804,162.742 177.533,162.902 192.371,166.878 193.082,167.104 193.726,167.374 194.330,167.689 207.391,175.222 207.814,175.342 208.108,175.352 208.398,175.304 208.674,175.201 208.923,175.045 209.229,174.729 216.927,161.411 217.037,161.174 217.105,160.921 219.974,144.589 220.000,144.243 220.000,103.500 219.935,103.065 219.823,102.793 219.660,102.548 219.333,102.253 218.935,102.065 218.500,102.000 201.317,102.000 200.578,101.966 199.828,101.862 199.024,101.668 198.375,101.445 197.684,101.135 196.966,100.723 196.406,100.327 195.830,99.836 195.256,99.240 194.788,98.645 194.414,98.070 194.060,97.401 193.701,96.549 193.538,96.303 193.211,96.005 192.812,95.815 192.374,95.750 181.933,95.750 181.147,95.711 180.486,95.620 179.769,95.455 179.005,95.200 178.333,94.901 177.750,94.578 176.651,93.804 176.378,93.690 176.088,93.632 164.933,93.625 164.147,93.586 163.486,93.495 162.769,93.330 162.005,93.075 161.333,92.776 160.750,92.453 159.651,91.679 159.235,91.529 158.941,91.500 142.908,91.507 142.621,91.564 142.351,91.675 141.771,92.105 141.133,92.522 140.315,92.941 139.603,93.216 138.793,93.438 137.963,93.575 137.064,93.625 126.340,93.625 126.049,93.653 125.637,93.800 125.394,93.961 125.186,94.166 124.793,94.727 124.315,95.297 123.728,95.871 123.086,96.382 122.395,96.824 121.662,97.193 120.895,97.485 120.103,97.697 119.216,97.835 118.415,97.875 93.000,97.875 92.707,97.904 92.426,97.989 92.167,98.128 91.939,98.314 91.753,98.542 91.614,98.801 91.529,99.082" fill="#000" opacity=".55" filter="url(#shadow)" transform="translate(1.5 3)"/>
+<polygon points="91.500,99.375 91.500,147.375 91.565,147.810 91.677,148.082 91.840,148.327 92.167,148.622 92.565,148.810 93.000,148.875 124.806,148.868 125.230,148.762 125.606,148.539 125.814,148.334 126.207,147.773 126.738,147.147 127.330,146.579 127.977,146.074 128.672,145.638 129.409,145.276 130.178,144.991 130.897,144.803 131.708,144.673 132.585,144.625 142.088,144.618 142.378,144.560 142.651,144.446 143.691,143.709 144.395,143.318 145.070,143.025 145.702,142.814 146.486,142.630 147.215,142.532 147.899,142.501 151.482,142.500 152.321,142.544 153.096,142.663 153.787,142.836 154.527,143.097 155.238,143.429 155.974,143.870 156.602,144.341 157.130,144.818 157.659,145.398 158.130,146.026 158.536,146.697 158.903,147.473 159.164,148.213 159.352,148.976 159.463,149.753 159.499,150.482 159.507,161.272 159.614,161.699 159.753,161.958 159.939,162.186 160.293,162.448 160.565,162.560 161.000,162.625 175.463,162.626 176.111,162.654 176.804,162.742 177.533,162.902 192.371,166.878 193.082,167.104 193.726,167.374 194.330,167.689 207.391,175.222 207.814,175.342 208.108,175.352 208.398,175.304 208.674,175.201 208.923,175.045 209.229,174.729 216.927,161.411 217.037,161.174 217.105,160.921 219.974,144.589 220.000,144.243 220.000,103.500 219.935,103.065 219.823,102.793 219.660,102.548 219.333,102.253 218.935,102.065 218.500,102.000 201.317,102.000 200.578,101.966 199.828,101.862 199.024,101.668 198.375,101.445 197.684,101.135 196.966,100.723 196.406,100.327 195.830,99.836 195.256,99.240 194.788,98.645 194.414,98.070 194.060,97.401 193.701,96.549 193.538,96.303 193.211,96.005 192.812,95.815 192.374,95.750 181.933,95.750 181.147,95.711 180.486,95.620 179.769,95.455 179.005,95.200 178.333,94.901 177.750,94.578 176.651,93.804 176.378,93.690 176.088,93.632 164.933,93.625 164.147,93.586 163.486,93.495 162.769,93.330 162.005,93.075 161.333,92.776 160.750,92.453 159.651,91.679 159.235,91.529 158.941,91.500 142.908,91.507 142.621,91.564 142.351,91.675 141.771,92.105 141.133,92.522 140.315,92.941 139.603,93.216 138.793,93.438 137.963,93.575 137.064,93.625 126.340,93.625 126.049,93.653 125.637,93.800 125.394,93.961 125.186,94.166 124.793,94.727 124.315,95.297 123.728,95.871 123.086,96.382 122.395,96.824 121.662,97.193 120.895,97.485 120.103,97.697 119.216,97.835 118.415,97.875 93.000,97.875 92.707,97.904 92.426,97.989 92.167,98.128 91.939,98.314 91.753,98.542 91.614,98.801 91.529,99.082" fill="url(#pcb)" stroke="#c9a227" stroke-width=".35"/>
+<polygon points="91.500,99.375 91.500,147.375 91.565,147.810 91.677,148.082 91.840,148.327 92.167,148.622 92.565,148.810 93.000,148.875 124.806,148.868 125.230,148.762 125.606,148.539 125.814,148.334 126.207,147.773 126.738,147.147 127.330,146.579 127.977,146.074 128.672,145.638 129.409,145.276 130.178,144.991 130.897,144.803 131.708,144.673 132.585,144.625 142.088,144.618 142.378,144.560 142.651,144.446 143.691,143.709 144.395,143.318 145.070,143.025 145.702,142.814 146.486,142.630 147.215,142.532 147.899,142.501 151.482,142.500 152.321,142.544 153.096,142.663 153.787,142.836 154.527,143.097 155.238,143.429 155.974,143.870 156.602,144.341 157.130,144.818 157.659,145.398 158.130,146.026 158.536,146.697 158.903,147.473 159.164,148.213 159.352,148.976 159.463,149.753 159.499,150.482 159.507,161.272 159.614,161.699 159.753,161.958 159.939,162.186 160.293,162.448 160.565,162.560 161.000,162.625 175.463,162.626 176.111,162.654 176.804,162.742 177.533,162.902 192.371,166.878 193.082,167.104 193.726,167.374 194.330,167.689 207.391,175.222 207.814,175.342 208.108,175.352 208.398,175.304 208.674,175.201 208.923,175.045 209.229,174.729 216.927,161.411 217.037,161.174 217.105,160.921 219.974,144.589 220.000,144.243 220.000,103.500 219.935,103.065 219.823,102.793 219.660,102.548 219.333,102.253 218.935,102.065 218.500,102.000 201.317,102.000 200.578,101.966 199.828,101.862 199.024,101.668 198.375,101.445 197.684,101.135 196.966,100.723 196.406,100.327 195.830,99.836 195.256,99.240 194.788,98.645 194.414,98.070 194.060,97.401 193.701,96.549 193.538,96.303 193.211,96.005 192.812,95.815 192.374,95.750 181.933,95.750 181.147,95.711 180.486,95.620 179.769,95.455 179.005,95.200 178.333,94.901 177.750,94.578 176.651,93.804 176.378,93.690 176.088,93.632 164.933,93.625 164.147,93.586 163.486,93.495 162.769,93.330 162.005,93.075 161.333,92.776 160.750,92.453 159.651,91.679 159.235,91.529 158.941,91.500 142.908,91.507 142.621,91.564 142.351,91.675 141.771,92.105 141.133,92.522 140.315,92.941 139.603,93.216 138.793,93.438 137.963,93.575 137.064,93.625 126.340,93.625 126.049,93.653 125.637,93.800 125.394,93.961 125.186,94.166 124.793,94.727 124.315,95.297 123.728,95.871 123.086,96.382 122.395,96.824 121.662,97.193 120.895,97.485 120.103,97.697 119.216,97.835 118.415,97.875 93.000,97.875 92.707,97.904 92.426,97.989 92.167,98.128 91.939,98.314 91.753,98.542 91.614,98.801 91.529,99.082" fill="none" stroke="#ffffff22" stroke-width=".2" transform="translate(-.15 -.15)"/>
+<text x="203.50" y="143.40" font-size="1.5" fill="#efe6ff" text-anchor="middle" font-weight="700" letter-spacing=".2">corne-pg1316s</text>
+<g transform="translate(204.000 119.000)">
+  <rect x="-9" y="-16.5" width="18" height="33" rx=".8" fill="#000" opacity=".5" filter="url(#soft)" transform="translate(.5 1)"/>
+  <rect x="-9" y="-16.5" width="18" height="33" rx=".8" fill="#14161a" stroke="#3a3d42" stroke-width=".2"/>
+  <rect x="-4.5" y="-17.7" width="9" height="3.6" rx="1.2" fill="url(#steel)" stroke="#777" stroke-width=".15"/>
+  <circle cx="-7.62" cy="-13.97" r=".75" fill="url(#gold)"/><circle cx="7.62" cy="-13.97" r=".75" fill="url(#gold)"/><circle cx="-7.62" cy="-11.43" r=".75" fill="url(#gold)"/><circle cx="7.62" cy="-11.43" r=".75" fill="url(#gold)"/><circle cx="-7.62" cy="-8.89" r=".75" fill="url(#gold)"/><circle cx="7.62" cy="-8.89" r=".75" fill="url(#gold)"/><circle cx="-7.62" cy="-6.35" r=".75" fill="url(#gold)"/><circle cx="7.62" cy="-6.35" r=".75" fill="url(#gold)"/><circle cx="-7.62" cy="-3.81" r=".75" fill="url(#gold)"/><circle cx="7.62" cy="-3.81" r=".75" fill="url(#gold)"/><circle cx="-7.62" cy="-1.27" r=".75" fill="url(#gold)"/><circle cx="7.62" cy="-1.27" r=".75" fill="url(#gold)"/><circle cx="-7.62" cy="1.27" r=".75" fill="url(#gold)"/><circle cx="7.62" cy="1.27" r=".75" fill="url(#gold)"/><circle cx="-7.62" cy="3.81" r=".75" fill="url(#gold)"/><circle cx="7.62" cy="3.81" r=".75" fill="url(#gold)"/><circle cx="-7.62" cy="6.35" r=".75" fill="url(#gold)"/><circle cx="7.62" cy="6.35" r=".75" fill="url(#gold)"/><circle cx="-7.62" cy="8.89" r=".75" fill="url(#gold)"/><circle cx="7.62" cy="8.89" r=".75" fill="url(#gold)"/><circle cx="-7.62" cy="11.43" r=".75" fill="url(#gold)"/><circle cx="7.62" cy="11.43" r=".75" fill="url(#gold)"/><circle cx="-7.62" cy="13.97" r=".75" fill="url(#gold)"/><circle cx="7.62" cy="13.97" r=".75" fill="url(#gold)"/>
+  <rect x="-7" y="-16.50" width="14" height="36" rx="1" fill="#000" opacity=".5" filter="url(#soft)" transform="translate(.6 1.2)"/>
+  <rect x="-7" y="-16.50" width="14" height="36" rx="1" fill="#1b1b1d" stroke="#444" stroke-width=".2"/>
+  <rect x="-6" y="-12.30" width="12" height="27.5" rx=".3" fill="#cfd3c8"/>
+  <text x="0" y="-7.50" font-size="2.4" fill="#222" text-anchor="middle" font-weight="700">87%</text>
+  <rect x="-3.2" y="-6.30" width="6.4" height="2.6" rx=".4" fill="none" stroke="#222" stroke-width=".35"/>
+  <rect x="-2.8" y="-5.90" width="4.8" height="1.8" fill="#222"/>
+  <text x="0" y="1.50" font-size="2" fill="#222" text-anchor="middle" font-weight="700">BT 1</text>
+  <circle cx="0" cy="6.00" r="2" fill="#222"/><text x="0" y="6.70" font-size="1.8" fill="#cfd3c8" text-anchor="middle" font-weight="700">1</text>
+  <text x="0" y="12.50" font-size="1.7" fill="#222" text-anchor="middle" font-weight="600">BASE</text>
+  <text x="0" y="18.10" font-size="1.1" fill="#999" text-anchor="middle">nice!view</text>
 </g>
-<circle cx="208.500" cy="131.000" r="1.6" fill="#a9a196" stroke="#2a1745" stroke-width=".35"/><circle cx="208.750" cy="131.300" r="1.2" fill="#8f877c"/>
+<circle cx="216.600" cy="114.500" r="1.6" fill="#a9a196" stroke="#2a1745" stroke-width=".35"/><circle cx="216.850" cy="114.800" r="1.2" fill="#8f877c"/>
 <g>
-  <rect x="197.050" y="128.150" width="7.4" height="5.75" rx=".4" fill="#000" opacity=".4" filter="url(#soft)" transform="translate(.4 .8)"/>
-  <rect x="197.050" y="128.150" width="7.4" height="5.75" rx=".4" fill="#f3efe4" stroke="#b9b2a2" stroke-width=".15"/>
-  <rect x="197.900" y="129.000" width="5.7" height="3.6" rx=".3" fill="#e4ddcc"/>
-  <path d="M199.500 130.500 C 200.500 135.500, 205.500 134.000, 208.100 131.000" stroke="#c62828" stroke-width=".7" fill="none" stroke-linecap="round"/>
-  <path d="M202.000 130.500 C 203.000 134.500, 206.500 133.000, 208.900 131.000" stroke="#1b1b1b" stroke-width=".7" fill="none" stroke-linecap="round"/>
-  <circle cx="199.500" cy="130.500" r=".55" fill="url(#gold)"/><circle cx="202.000" cy="130.500" r=".55" fill="url(#gold)"/>
+  <rect x="213.650" y="103.050" width="5.75" height="7.4" rx=".4" fill="#000" opacity=".4" filter="url(#soft)" transform="translate(.4 .8)"/>
+  <rect x="213.650" y="103.050" width="5.75" height="7.4" rx=".4" fill="#f3efe4" stroke="#b9b2a2" stroke-width=".15"/>
+  <rect x="214.500" y="103.900" width="3.6" height="5.7" rx=".3" fill="#e4ddcc"/>
+  <path d="M216.000 108.000 C 216.000 111.000, 216.600 111.500, 216.200 114.500" stroke="#c62828" stroke-width=".7" fill="none" stroke-linecap="round"/>
+  <path d="M216.800 105.500 C 218.500 109.000, 217.600 111.500, 217.000 114.500" stroke="#1b1b1b" stroke-width=".7" fill="none" stroke-linecap="round"/>
+  <circle cx="216.000" cy="108.000" r=".55" fill="url(#gold)"/><circle cx="216.000" cy="105.500" r=".55" fill="url(#gold)"/>
 </g>
-<g transform="translate(215.221 138.381)">
+<g transform="translate(218.220 121.500)">
   <rect x="-2" y="-3.8" width="4" height="7.6" rx=".4" fill="url(#steel)" stroke="#666" stroke-width=".15"/>
   <rect x="1.4" y="-1.8" width="1.8" height="1.6" rx=".3" fill="#1a1a1a"/>
 </g>
+<rect x="215.750" y="128.500" width="2.5" height="3" rx=".3" fill="url(#steel)" stroke="#666" stroke-width=".15"/><circle cx="217.000" cy="130.000" r=".7" fill="#2a2a2a"/>
 <g transform="translate(100.000 106.375) rotate(-0.00)">
-  <rect x="-8.25" y="-8.25" width="16.5" height="16.5" rx="2.4" fill="#000" opacity=".35" filter="url(#soft)" transform="translate(.6 1.1)"/>
-  <rect x="-8.25" y="-8.25" width="16.5" height="16.5" rx="2.4" fill="url(#capM)" stroke="#00000055" stroke-width=".25"/>
-  <rect x="-7.6" y="-7.5" width="15.2" height="14.2" rx="1.6" fill="#ffffff" opacity=".10"/>
-  <text x="0" y="0.80" font-size="2.3" fill="#2b2b2b" text-anchor="middle" font-weight="600">Tab</text>
+  <rect x="-8" y="-8" width="16" height="16" rx="2" fill="#000" opacity=".3" filter="url(#soft)" transform="translate(.6 1.1)"/>
+  <circle cx="0" cy="-2.5" r="7.5" fill="hsl(10,100%,60%)" opacity=".85" filter="url(#glow)"/>
+  <rect x="-8" y="-8" width="16" height="16" rx="2" fill="#ffffff" fill-opacity=".38" stroke="#ffffff99" stroke-width=".3"/>
+  <rect x="-7.3" y="-7.3" width="14.6" height="13.6" rx="1.5" fill="#ffffff" opacity=".12"/>
+  <circle cx="0" cy="-2.5" r="1.6" fill="hsl(10,100%,85%)" opacity=".9" filter="url(#soft)"/>
+  <text x="0" y="2.80" font-size="2.3" fill="#1e1e1e" fill-opacity=".8" text-anchor="middle" font-weight="600">Tab</text>
 </g>
 <g transform="translate(100.000 123.375) rotate(-0.00)">
-  <rect x="-8.25" y="-8.25" width="16.5" height="16.5" rx="2.4" fill="#000" opacity=".35" filter="url(#soft)" transform="translate(.6 1.1)"/>
-  <rect x="-8.25" y="-8.25" width="16.5" height="16.5" rx="2.4" fill="url(#capM)" stroke="#00000055" stroke-width=".25"/>
-  <rect x="-7.6" y="-7.5" width="15.2" height="14.2" rx="1.6" fill="#ffffff" opacity=".10"/>
-  <text x="0" y="0.80" font-size="2.3" fill="#2b2b2b" text-anchor="middle" font-weight="600">Ctrl</text>
+  <rect x="-8" y="-8" width="16" height="16" rx="2" fill="#000" opacity=".3" filter="url(#soft)" transform="translate(.6 1.1)"/>
+  <circle cx="0" cy="-2.5" r="7.5" fill="hsl(10,100%,60%)" opacity=".85" filter="url(#glow)"/>
+  <rect x="-8" y="-8" width="16" height="16" rx="2" fill="#ffffff" fill-opacity=".38" stroke="#ffffff99" stroke-width=".3"/>
+  <rect x="-7.3" y="-7.3" width="14.6" height="13.6" rx="1.5" fill="#ffffff" opacity=".12"/>
+  <circle cx="0" cy="-2.5" r="1.6" fill="hsl(10,100%,85%)" opacity=".9" filter="url(#soft)"/>
+  <text x="0" y="2.80" font-size="2.3" fill="#1e1e1e" fill-opacity=".8" text-anchor="middle" font-weight="600">Ctrl</text>
 </g>
 <g transform="translate(100.000 140.375) rotate(-0.00)">
-  <rect x="-8.25" y="-8.25" width="16.5" height="16.5" rx="2.4" fill="#000" opacity=".35" filter="url(#soft)" transform="translate(.6 1.1)"/>
-  <rect x="-8.25" y="-8.25" width="16.5" height="16.5" rx="2.4" fill="url(#capM)" stroke="#00000055" stroke-width=".25"/>
-  <rect x="-7.6" y="-7.5" width="15.2" height="14.2" rx="1.6" fill="#ffffff" opacity=".10"/>
-  <text x="0" y="0.80" font-size="2.3" fill="#2b2b2b" text-anchor="middle" font-weight="600">Shift</text>
+  <rect x="-8" y="-8" width="16" height="16" rx="2" fill="#000" opacity=".3" filter="url(#soft)" transform="translate(.6 1.1)"/>
+  <circle cx="0" cy="-2.5" r="7.5" fill="hsl(10,100%,60%)" opacity=".85" filter="url(#glow)"/>
+  <rect x="-8" y="-8" width="16" height="16" rx="2" fill="#ffffff" fill-opacity=".38" stroke="#ffffff99" stroke-width=".3"/>
+  <rect x="-7.3" y="-7.3" width="14.6" height="13.6" rx="1.5" fill="#ffffff" opacity=".12"/>
+  <circle cx="0" cy="-2.5" r="1.6" fill="hsl(10,100%,85%)" opacity=".9" filter="url(#soft)"/>
+  <text x="0" y="2.80" font-size="2.3" fill="#1e1e1e" fill-opacity=".8" text-anchor="middle" font-weight="600">Shift</text>
 </g>
 <g transform="translate(117.000 106.375) rotate(-0.00)">
-  <rect x="-8.25" y="-8.25" width="16.5" height="16.5" rx="2.4" fill="#000" opacity=".35" filter="url(#soft)" transform="translate(.6 1.1)"/>
-  <rect x="-8.25" y="-8.25" width="16.5" height="16.5" rx="2.4" fill="url(#capA)" stroke="#00000055" stroke-width=".25"/>
-  <rect x="-7.6" y="-7.5" width="15.2" height="14.2" rx="1.6" fill="#ffffff" opacity=".10"/>
-  <text x="0" y="1.19" font-size="3.4" fill="#2b2b2b" text-anchor="middle" font-weight="600">Q</text>
+  <rect x="-8" y="-8" width="16" height="16" rx="2" fill="#000" opacity=".3" filter="url(#soft)" transform="translate(.6 1.1)"/>
+  <circle cx="0" cy="-2.5" r="7.5" fill="hsl(30,100%,60%)" opacity=".85" filter="url(#glow)"/>
+  <rect x="-8" y="-8" width="16" height="16" rx="2" fill="#ffffff" fill-opacity=".38" stroke="#ffffff99" stroke-width=".3"/>
+  <rect x="-7.3" y="-7.3" width="14.6" height="13.6" rx="1.5" fill="#ffffff" opacity=".12"/>
+  <circle cx="0" cy="-2.5" r="1.6" fill="hsl(30,100%,85%)" opacity=".9" filter="url(#soft)"/>
+  <text x="0" y="3.19" font-size="3.4" fill="#1e1e1e" fill-opacity=".8" text-anchor="middle" font-weight="600">Q</text>
 </g>
 <g transform="translate(117.000 123.375) rotate(-0.00)">
-  <rect x="-8.25" y="-8.25" width="16.5" height="16.5" rx="2.4" fill="#000" opacity=".35" filter="url(#soft)" transform="translate(.6 1.1)"/>
-  <rect x="-8.25" y="-8.25" width="16.5" height="16.5" rx="2.4" fill="url(#capA)" stroke="#00000055" stroke-width=".25"/>
-  <rect x="-7.6" y="-7.5" width="15.2" height="14.2" rx="1.6" fill="#ffffff" opacity=".10"/>
-  <text x="0" y="1.19" font-size="3.4" fill="#2b2b2b" text-anchor="middle" font-weight="600">A</text>
+  <rect x="-8" y="-8" width="16" height="16" rx="2" fill="#000" opacity=".3" filter="url(#soft)" transform="translate(.6 1.1)"/>
+  <circle cx="0" cy="-2.5" r="7.5" fill="hsl(30,100%,60%)" opacity=".85" filter="url(#glow)"/>
+  <rect x="-8" y="-8" width="16" height="16" rx="2" fill="#ffffff" fill-opacity=".38" stroke="#ffffff99" stroke-width=".3"/>
+  <rect x="-7.3" y="-7.3" width="14.6" height="13.6" rx="1.5" fill="#ffffff" opacity=".12"/>
+  <circle cx="0" cy="-2.5" r="1.6" fill="hsl(30,100%,85%)" opacity=".9" filter="url(#soft)"/>
+  <text x="0" y="3.19" font-size="3.4" fill="#1e1e1e" fill-opacity=".8" text-anchor="middle" font-weight="600">A</text>
 </g>
 <g transform="translate(117.000 140.375) rotate(-0.00)">
-  <rect x="-8.25" y="-8.25" width="16.5" height="16.5" rx="2.4" fill="#000" opacity=".35" filter="url(#soft)" transform="translate(.6 1.1)"/>
-  <rect x="-8.25" y="-8.25" width="16.5" height="16.5" rx="2.4" fill="url(#capA)" stroke="#00000055" stroke-width=".25"/>
-  <rect x="-7.6" y="-7.5" width="15.2" height="14.2" rx="1.6" fill="#ffffff" opacity=".10"/>
-  <text x="0" y="1.19" font-size="3.4" fill="#2b2b2b" text-anchor="middle" font-weight="600">Z</text>
+  <rect x="-8" y="-8" width="16" height="16" rx="2" fill="#000" opacity=".3" filter="url(#soft)" transform="translate(.6 1.1)"/>
+  <circle cx="0" cy="-2.5" r="7.5" fill="hsl(30,100%,60%)" opacity=".85" filter="url(#glow)"/>
+  <rect x="-8" y="-8" width="16" height="16" rx="2" fill="#ffffff" fill-opacity=".38" stroke="#ffffff99" stroke-width=".3"/>
+  <rect x="-7.3" y="-7.3" width="14.6" height="13.6" rx="1.5" fill="#ffffff" opacity=".12"/>
+  <circle cx="0" cy="-2.5" r="1.6" fill="hsl(30,100%,85%)" opacity=".9" filter="url(#soft)"/>
+  <text x="0" y="3.19" font-size="3.4" fill="#1e1e1e" fill-opacity=".8" text-anchor="middle" font-weight="600">Z</text>
 </g>
 <g transform="translate(134.000 102.125) rotate(-0.00)">
-  <rect x="-8.25" y="-8.25" width="16.5" height="16.5" rx="2.4" fill="#000" opacity=".35" filter="url(#soft)" transform="translate(.6 1.1)"/>
-  <rect x="-8.25" y="-8.25" width="16.5" height="16.5" rx="2.4" fill="url(#capA)" stroke="#00000055" stroke-width=".25"/>
-  <rect x="-7.6" y="-7.5" width="15.2" height="14.2" rx="1.6" fill="#ffffff" opacity=".10"/>
-  <text x="0" y="1.19" font-size="3.4" fill="#2b2b2b" text-anchor="middle" font-weight="600">W</text>
+  <rect x="-8" y="-8" width="16" height="16" rx="2" fill="#000" opacity=".3" filter="url(#soft)" transform="translate(.6 1.1)"/>
+  <circle cx="0" cy="-2.5" r="7.5" fill="hsl(50,100%,60%)" opacity=".85" filter="url(#glow)"/>
+  <rect x="-8" y="-8" width="16" height="16" rx="2" fill="#ffffff" fill-opacity=".38" stroke="#ffffff99" stroke-width=".3"/>
+  <rect x="-7.3" y="-7.3" width="14.6" height="13.6" rx="1.5" fill="#ffffff" opacity=".12"/>
+  <circle cx="0" cy="-2.5" r="1.6" fill="hsl(50,100%,85%)" opacity=".9" filter="url(#soft)"/>
+  <text x="0" y="3.19" font-size="3.4" fill="#1e1e1e" fill-opacity=".8" text-anchor="middle" font-weight="600">W</text>
 </g>
 <g transform="translate(134.000 119.125) rotate(-0.00)">
-  <rect x="-8.25" y="-8.25" width="16.5" height="16.5" rx="2.4" fill="#000" opacity=".35" filter="url(#soft)" transform="translate(.6 1.1)"/>
-  <rect x="-8.25" y="-8.25" width="16.5" height="16.5" rx="2.4" fill="url(#capA)" stroke="#00000055" stroke-width=".25"/>
-  <rect x="-7.6" y="-7.5" width="15.2" height="14.2" rx="1.6" fill="#ffffff" opacity=".10"/>
-  <text x="0" y="1.19" font-size="3.4" fill="#2b2b2b" text-anchor="middle" font-weight="600">S</text>
+  <rect x="-8" y="-8" width="16" height="16" rx="2" fill="#000" opacity=".3" filter="url(#soft)" transform="translate(.6 1.1)"/>
+  <circle cx="0" cy="-2.5" r="7.5" fill="hsl(50,100%,60%)" opacity=".85" filter="url(#glow)"/>
+  <rect x="-8" y="-8" width="16" height="16" rx="2" fill="#ffffff" fill-opacity=".38" stroke="#ffffff99" stroke-width=".3"/>
+  <rect x="-7.3" y="-7.3" width="14.6" height="13.6" rx="1.5" fill="#ffffff" opacity=".12"/>
+  <circle cx="0" cy="-2.5" r="1.6" fill="hsl(50,100%,85%)" opacity=".9" filter="url(#soft)"/>
+  <text x="0" y="3.19" font-size="3.4" fill="#1e1e1e" fill-opacity=".8" text-anchor="middle" font-weight="600">S</text>
 </g>
 <g transform="translate(134.000 136.125) rotate(-0.00)">
-  <rect x="-8.25" y="-8.25" width="16.5" height="16.5" rx="2.4" fill="#000" opacity=".35" filter="url(#soft)" transform="translate(.6 1.1)"/>
-  <rect x="-8.25" y="-8.25" width="16.5" height="16.5" rx="2.4" fill="url(#capA)" stroke="#00000055" stroke-width=".25"/>
-  <rect x="-7.6" y="-7.5" width="15.2" height="14.2" rx="1.6" fill="#ffffff" opacity=".10"/>
-  <text x="0" y="1.19" font-size="3.4" fill="#2b2b2b" text-anchor="middle" font-weight="600">X</text>
+  <rect x="-8" y="-8" width="16" height="16" rx="2" fill="#000" opacity=".3" filter="url(#soft)" transform="translate(.6 1.1)"/>
+  <circle cx="0" cy="-2.5" r="7.5" fill="hsl(50,100%,60%)" opacity=".85" filter="url(#glow)"/>
+  <rect x="-8" y="-8" width="16" height="16" rx="2" fill="#ffffff" fill-opacity=".38" stroke="#ffffff99" stroke-width=".3"/>
+  <rect x="-7.3" y="-7.3" width="14.6" height="13.6" rx="1.5" fill="#ffffff" opacity=".12"/>
+  <circle cx="0" cy="-2.5" r="1.6" fill="hsl(50,100%,85%)" opacity=".9" filter="url(#soft)"/>
+  <text x="0" y="3.19" font-size="3.4" fill="#1e1e1e" fill-opacity=".8" text-anchor="middle" font-weight="600">X</text>
 </g>
 <g transform="translate(151.000 100.000) rotate(-0.00)">
-  <rect x="-8.25" y="-8.25" width="16.5" height="16.5" rx="2.4" fill="#000" opacity=".35" filter="url(#soft)" transform="translate(.6 1.1)"/>
-  <rect x="-8.25" y="-8.25" width="16.5" height="16.5" rx="2.4" fill="url(#capA)" stroke="#00000055" stroke-width=".25"/>
-  <rect x="-7.6" y="-7.5" width="15.2" height="14.2" rx="1.6" fill="#ffffff" opacity=".10"/>
-  <text x="0" y="1.19" font-size="3.4" fill="#2b2b2b" text-anchor="middle" font-weight="600">E</text>
+  <rect x="-8" y="-8" width="16" height="16" rx="2" fill="#000" opacity=".3" filter="url(#soft)" transform="translate(.6 1.1)"/>
+  <circle cx="0" cy="-2.5" r="7.5" fill="hsl(69,100%,60%)" opacity=".85" filter="url(#glow)"/>
+  <rect x="-8" y="-8" width="16" height="16" rx="2" fill="#ffffff" fill-opacity=".38" stroke="#ffffff99" stroke-width=".3"/>
+  <rect x="-7.3" y="-7.3" width="14.6" height="13.6" rx="1.5" fill="#ffffff" opacity=".12"/>
+  <circle cx="0" cy="-2.5" r="1.6" fill="hsl(69,100%,85%)" opacity=".9" filter="url(#soft)"/>
+  <text x="0" y="3.19" font-size="3.4" fill="#1e1e1e" fill-opacity=".8" text-anchor="middle" font-weight="600">E</text>
 </g>
 <g transform="translate(151.000 117.000) rotate(-0.00)">
-  <rect x="-8.25" y="-8.25" width="16.5" height="16.5" rx="2.4" fill="#000" opacity=".35" filter="url(#soft)" transform="translate(.6 1.1)"/>
-  <rect x="-8.25" y="-8.25" width="16.5" height="16.5" rx="2.4" fill="url(#capA)" stroke="#00000055" stroke-width=".25"/>
-  <rect x="-7.6" y="-7.5" width="15.2" height="14.2" rx="1.6" fill="#ffffff" opacity=".10"/>
-  <text x="0" y="1.19" font-size="3.4" fill="#2b2b2b" text-anchor="middle" font-weight="600">D</text>
+  <rect x="-8" y="-8" width="16" height="16" rx="2" fill="#000" opacity=".3" filter="url(#soft)" transform="translate(.6 1.1)"/>
+  <circle cx="0" cy="-2.5" r="7.5" fill="hsl(69,100%,60%)" opacity=".85" filter="url(#glow)"/>
+  <rect x="-8" y="-8" width="16" height="16" rx="2" fill="#ffffff" fill-opacity=".38" stroke="#ffffff99" stroke-width=".3"/>
+  <rect x="-7.3" y="-7.3" width="14.6" height="13.6" rx="1.5" fill="#ffffff" opacity=".12"/>
+  <circle cx="0" cy="-2.5" r="1.6" fill="hsl(69,100%,85%)" opacity=".9" filter="url(#soft)"/>
+  <text x="0" y="3.19" font-size="3.4" fill="#1e1e1e" fill-opacity=".8" text-anchor="middle" font-weight="600">D</text>
 </g>
 <g transform="translate(151.000 134.000) rotate(-0.00)">
-  <rect x="-8.25" y="-8.25" width="16.5" height="16.5" rx="2.4" fill="#000" opacity=".35" filter="url(#soft)" transform="translate(.6 1.1)"/>
-  <rect x="-8.25" y="-8.25" width="16.5" height="16.5" rx="2.4" fill="url(#capA)" stroke="#00000055" stroke-width=".25"/>
-  <rect x="-7.6" y="-7.5" width="15.2" height="14.2" rx="1.6" fill="#ffffff" opacity=".10"/>
-  <text x="0" y="1.19" font-size="3.4" fill="#2b2b2b" text-anchor="middle" font-weight="600">C</text>
+  <rect x="-8" y="-8" width="16" height="16" rx="2" fill="#000" opacity=".3" filter="url(#soft)" transform="translate(.6 1.1)"/>
+  <circle cx="0" cy="-2.5" r="7.5" fill="hsl(69,100%,60%)" opacity=".85" filter="url(#glow)"/>
+  <rect x="-8" y="-8" width="16" height="16" rx="2" fill="#ffffff" fill-opacity=".38" stroke="#ffffff99" stroke-width=".3"/>
+  <rect x="-7.3" y="-7.3" width="14.6" height="13.6" rx="1.5" fill="#ffffff" opacity=".12"/>
+  <circle cx="0" cy="-2.5" r="1.6" fill="hsl(69,100%,85%)" opacity=".9" filter="url(#soft)"/>
+  <text x="0" y="3.19" font-size="3.4" fill="#1e1e1e" fill-opacity=".8" text-anchor="middle" font-weight="600">C</text>
 </g>
 <g transform="translate(168.000 102.125) rotate(-0.00)">
-  <rect x="-8.25" y="-8.25" width="16.5" height="16.5" rx="2.4" fill="#000" opacity=".35" filter="url(#soft)" transform="translate(.6 1.1)"/>
-  <rect x="-8.25" y="-8.25" width="16.5" height="16.5" rx="2.4" fill="url(#capA)" stroke="#00000055" stroke-width=".25"/>
-  <rect x="-7.6" y="-7.5" width="15.2" height="14.2" rx="1.6" fill="#ffffff" opacity=".10"/>
-  <text x="0" y="1.19" font-size="3.4" fill="#2b2b2b" text-anchor="middle" font-weight="600">R</text>
+  <rect x="-8" y="-8" width="16" height="16" rx="2" fill="#000" opacity=".3" filter="url(#soft)" transform="translate(.6 1.1)"/>
+  <circle cx="0" cy="-2.5" r="7.5" fill="hsl(89,100%,60%)" opacity=".85" filter="url(#glow)"/>
+  <rect x="-8" y="-8" width="16" height="16" rx="2" fill="#ffffff" fill-opacity=".38" stroke="#ffffff99" stroke-width=".3"/>
+  <rect x="-7.3" y="-7.3" width="14.6" height="13.6" rx="1.5" fill="#ffffff" opacity=".12"/>
+  <circle cx="0" cy="-2.5" r="1.6" fill="hsl(89,100%,85%)" opacity=".9" filter="url(#soft)"/>
+  <text x="0" y="3.19" font-size="3.4" fill="#1e1e1e" fill-opacity=".8" text-anchor="middle" font-weight="600">R</text>
 </g>
 <g transform="translate(168.000 119.125) rotate(-0.00)">
-  <rect x="-8.25" y="-8.25" width="16.5" height="16.5" rx="2.4" fill="#000" opacity=".35" filter="url(#soft)" transform="translate(.6 1.1)"/>
-  <rect x="-8.25" y="-8.25" width="16.5" height="16.5" rx="2.4" fill="url(#capA)" stroke="#00000055" stroke-width=".25"/>
-  <rect x="-7.6" y="-7.5" width="15.2" height="14.2" rx="1.6" fill="#ffffff" opacity=".10"/>
-  <text x="0" y="1.19" font-size="3.4" fill="#2b2b2b" text-anchor="middle" font-weight="600">F</text>
+  <rect x="-8" y="-8" width="16" height="16" rx="2" fill="#000" opacity=".3" filter="url(#soft)" transform="translate(.6 1.1)"/>
+  <circle cx="0" cy="-2.5" r="7.5" fill="hsl(89,100%,60%)" opacity=".85" filter="url(#glow)"/>
+  <rect x="-8" y="-8" width="16" height="16" rx="2" fill="#ffffff" fill-opacity=".38" stroke="#ffffff99" stroke-width=".3"/>
+  <rect x="-7.3" y="-7.3" width="14.6" height="13.6" rx="1.5" fill="#ffffff" opacity=".12"/>
+  <circle cx="0" cy="-2.5" r="1.6" fill="hsl(89,100%,85%)" opacity=".9" filter="url(#soft)"/>
+  <text x="0" y="3.19" font-size="3.4" fill="#1e1e1e" fill-opacity=".8" text-anchor="middle" font-weight="600">F</text>
 </g>
 <g transform="translate(168.000 136.125) rotate(-0.00)">
-  <rect x="-8.25" y="-8.25" width="16.5" height="16.5" rx="2.4" fill="#000" opacity=".35" filter="url(#soft)" transform="translate(.6 1.1)"/>
-  <rect x="-8.25" y="-8.25" width="16.5" height="16.5" rx="2.4" fill="url(#capA)" stroke="#00000055" stroke-width=".25"/>
-  <rect x="-7.6" y="-7.5" width="15.2" height="14.2" rx="1.6" fill="#ffffff" opacity=".10"/>
-  <text x="0" y="1.19" font-size="3.4" fill="#2b2b2b" text-anchor="middle" font-weight="600">V</text>
+  <rect x="-8" y="-8" width="16" height="16" rx="2" fill="#000" opacity=".3" filter="url(#soft)" transform="translate(.6 1.1)"/>
+  <circle cx="0" cy="-2.5" r="7.5" fill="hsl(89,100%,60%)" opacity=".85" filter="url(#glow)"/>
+  <rect x="-8" y="-8" width="16" height="16" rx="2" fill="#ffffff" fill-opacity=".38" stroke="#ffffff99" stroke-width=".3"/>
+  <rect x="-7.3" y="-7.3" width="14.6" height="13.6" rx="1.5" fill="#ffffff" opacity=".12"/>
+  <circle cx="0" cy="-2.5" r="1.6" fill="hsl(89,100%,85%)" opacity=".9" filter="url(#soft)"/>
+  <text x="0" y="3.19" font-size="3.4" fill="#1e1e1e" fill-opacity=".8" text-anchor="middle" font-weight="600">V</text>
 </g>
 <g transform="translate(185.000 104.250) rotate(-0.00)">
-  <rect x="-8.25" y="-8.25" width="16.5" height="16.5" rx="2.4" fill="#000" opacity=".35" filter="url(#soft)" transform="translate(.6 1.1)"/>
-  <rect x="-8.25" y="-8.25" width="16.5" height="16.5" rx="2.4" fill="url(#capA)" stroke="#00000055" stroke-width=".25"/>
-  <rect x="-7.6" y="-7.5" width="15.2" height="14.2" rx="1.6" fill="#ffffff" opacity=".10"/>
-  <text x="0" y="1.19" font-size="3.4" fill="#2b2b2b" text-anchor="middle" font-weight="600">T</text>
+  <rect x="-8" y="-8" width="16" height="16" rx="2" fill="#000" opacity=".3" filter="url(#soft)" transform="translate(.6 1.1)"/>
+  <circle cx="0" cy="-2.5" r="7.5" fill="hsl(109,100%,60%)" opacity=".85" filter="url(#glow)"/>
+  <rect x="-8" y="-8" width="16" height="16" rx="2" fill="#ffffff" fill-opacity=".38" stroke="#ffffff99" stroke-width=".3"/>
+  <rect x="-7.3" y="-7.3" width="14.6" height="13.6" rx="1.5" fill="#ffffff" opacity=".12"/>
+  <circle cx="0" cy="-2.5" r="1.6" fill="hsl(109,100%,85%)" opacity=".9" filter="url(#soft)"/>
+  <text x="0" y="3.19" font-size="3.4" fill="#1e1e1e" fill-opacity=".8" text-anchor="middle" font-weight="600">T</text>
 </g>
 <g transform="translate(185.000 121.250) rotate(-0.00)">
-  <rect x="-8.25" y="-8.25" width="16.5" height="16.5" rx="2.4" fill="#000" opacity=".35" filter="url(#soft)" transform="translate(.6 1.1)"/>
-  <rect x="-8.25" y="-8.25" width="16.5" height="16.5" rx="2.4" fill="url(#capA)" stroke="#00000055" stroke-width=".25"/>
-  <rect x="-7.6" y="-7.5" width="15.2" height="14.2" rx="1.6" fill="#ffffff" opacity=".10"/>
-  <text x="0" y="1.19" font-size="3.4" fill="#2b2b2b" text-anchor="middle" font-weight="600">G</text>
+  <rect x="-8" y="-8" width="16" height="16" rx="2" fill="#000" opacity=".3" filter="url(#soft)" transform="translate(.6 1.1)"/>
+  <circle cx="0" cy="-2.5" r="7.5" fill="hsl(109,100%,60%)" opacity=".85" filter="url(#glow)"/>
+  <rect x="-8" y="-8" width="16" height="16" rx="2" fill="#ffffff" fill-opacity=".38" stroke="#ffffff99" stroke-width=".3"/>
+  <rect x="-7.3" y="-7.3" width="14.6" height="13.6" rx="1.5" fill="#ffffff" opacity=".12"/>
+  <circle cx="0" cy="-2.5" r="1.6" fill="hsl(109,100%,85%)" opacity=".9" filter="url(#soft)"/>
+  <text x="0" y="3.19" font-size="3.4" fill="#1e1e1e" fill-opacity=".8" text-anchor="middle" font-weight="600">G</text>
 </g>
 <g transform="translate(185.000 138.250) rotate(-0.00)">
-  <rect x="-8.25" y="-8.25" width="16.5" height="16.5" rx="2.4" fill="#000" opacity=".35" filter="url(#soft)" transform="translate(.6 1.1)"/>
-  <rect x="-8.25" y="-8.25" width="16.5" height="16.5" rx="2.4" fill="url(#capA)" stroke="#00000055" stroke-width=".25"/>
-  <rect x="-7.6" y="-7.5" width="15.2" height="14.2" rx="1.6" fill="#ffffff" opacity=".10"/>
-  <text x="0" y="1.19" font-size="3.4" fill="#2b2b2b" text-anchor="middle" font-weight="600">B</text>
+  <rect x="-8" y="-8" width="16" height="16" rx="2" fill="#000" opacity=".3" filter="url(#soft)" transform="translate(.6 1.1)"/>
+  <circle cx="0" cy="-2.5" r="7.5" fill="hsl(109,100%,60%)" opacity=".85" filter="url(#glow)"/>
+  <rect x="-8" y="-8" width="16" height="16" rx="2" fill="#ffffff" fill-opacity=".38" stroke="#ffffff99" stroke-width=".3"/>
+  <rect x="-7.3" y="-7.3" width="14.6" height="13.6" rx="1.5" fill="#ffffff" opacity=".12"/>
+  <circle cx="0" cy="-2.5" r="1.6" fill="hsl(109,100%,85%)" opacity=".9" filter="url(#soft)"/>
+  <text x="0" y="3.19" font-size="3.4" fill="#1e1e1e" fill-opacity=".8" text-anchor="middle" font-weight="600">B</text>
 </g>
 <g transform="translate(168.000 154.125) rotate(-0.00)">
-  <rect x="-8.25" y="-8.25" width="16.5" height="16.5" rx="2.4" fill="#000" opacity=".35" filter="url(#soft)" transform="translate(.6 1.1)"/>
-  <rect x="-8.25" y="-8.25" width="16.5" height="16.5" rx="2.4" fill="url(#capT)" stroke="#00000055" stroke-width=".25"/>
-  <rect x="-7.6" y="-7.5" width="15.2" height="14.2" rx="1.6" fill="#ffffff" opacity=".10"/>
-  <text x="0" y="0.80" font-size="2.3" fill="#f7f3ea" text-anchor="middle" font-weight="600">GUI</text>
+  <rect x="-8" y="-8" width="16" height="16" rx="2" fill="#000" opacity=".3" filter="url(#soft)" transform="translate(.6 1.1)"/>
+  <circle cx="0" cy="-2.5" r="7.5" fill="hsl(89,100%,60%)" opacity=".85" filter="url(#glow)"/>
+  <rect x="-8" y="-8" width="16" height="16" rx="2" fill="#ffffff" fill-opacity=".38" stroke="#ffffff99" stroke-width=".3"/>
+  <rect x="-7.3" y="-7.3" width="14.6" height="13.6" rx="1.5" fill="#ffffff" opacity=".12"/>
+  <circle cx="0" cy="-2.5" r="1.6" fill="hsl(89,100%,85%)" opacity=".9" filter="url(#soft)"/>
+  <text x="0" y="2.80" font-size="2.3" fill="#1e1e1e" fill-opacity=".8" text-anchor="middle" font-weight="600">GUI</text>
 </g>
 <g transform="translate(187.393 156.744) rotate(15.00)">
-  <rect x="-8.25" y="-8.25" width="16.5" height="16.5" rx="2.4" fill="#000" opacity=".35" filter="url(#soft)" transform="translate(.6 1.1)"/>
-  <rect x="-8.25" y="-8.25" width="16.5" height="16.5" rx="2.4" fill="url(#capT)" stroke="#00000055" stroke-width=".25"/>
-  <rect x="-7.6" y="-7.5" width="15.2" height="14.2" rx="1.6" fill="#ffffff" opacity=".10"/>
-  <text x="0" y="0.80" font-size="2.3" fill="#f7f3ea" text-anchor="middle" font-weight="600">Lower</text>
+  <rect x="-8" y="-8" width="16" height="16" rx="2" fill="#000" opacity=".3" filter="url(#soft)" transform="translate(.6 1.1)"/>
+  <circle cx="0" cy="-2.5" r="7.5" fill="hsl(112,100%,60%)" opacity=".85" filter="url(#glow)"/>
+  <rect x="-8" y="-8" width="16" height="16" rx="2" fill="#ffffff" fill-opacity=".38" stroke="#ffffff99" stroke-width=".3"/>
+  <rect x="-7.3" y="-7.3" width="14.6" height="13.6" rx="1.5" fill="#ffffff" opacity=".12"/>
+  <circle cx="0" cy="-2.5" r="1.6" fill="hsl(112,100%,85%)" opacity=".9" filter="url(#soft)"/>
+  <text x="0" y="2.80" font-size="2.3" fill="#1e1e1e" fill-opacity=".8" text-anchor="middle" font-weight="600">Lower</text>
 </g>
 <g transform="translate(205.448 164.293) rotate(30.00)">
-  <rect x="-8.25" y="-8.25" width="16.5" height="16.5" rx="2.4" fill="#000" opacity=".35" filter="url(#soft)" transform="translate(.6 1.1)"/>
-  <rect x="-8.25" y="-8.25" width="16.5" height="16.5" rx="2.4" fill="url(#capT)" stroke="#00000055" stroke-width=".25"/>
-  <rect x="-7.6" y="-7.5" width="15.2" height="14.2" rx="1.6" fill="#ffffff" opacity=".10"/>
-  <text x="0" y="0.80" font-size="2.3" fill="#f7f3ea" text-anchor="middle" font-weight="600">Space</text>
+  <rect x="-8" y="-8" width="16" height="16" rx="2" fill="#000" opacity=".3" filter="url(#soft)" transform="translate(.6 1.1)"/>
+  <circle cx="0" cy="-2.5" r="7.5" fill="hsl(133,100%,60%)" opacity=".85" filter="url(#glow)"/>
+  <rect x="-8" y="-8" width="16" height="16" rx="2" fill="#ffffff" fill-opacity=".38" stroke="#ffffff99" stroke-width=".3"/>
+  <rect x="-7.3" y="-7.3" width="14.6" height="13.6" rx="1.5" fill="#ffffff" opacity=".12"/>
+  <circle cx="0" cy="-2.5" r="1.6" fill="hsl(133,100%,85%)" opacity=".9" filter="url(#soft)"/>
+  <text x="0" y="2.80" font-size="2.3" fill="#1e1e1e" fill-opacity=".8" text-anchor="middle" font-weight="600">Space</text>
 </g>
-<polygon points="388.602,99.375 388.602,147.375 388.537,147.810 388.425,148.082 388.262,148.327 387.935,148.622 387.537,148.810 387.102,148.875 355.296,148.868 354.872,148.762 354.496,148.539 354.288,148.334 353.895,147.773 353.364,147.147 352.772,146.579 352.125,146.074 351.430,145.638 350.693,145.276 349.924,144.991 349.205,144.803 348.394,144.673 347.517,144.625 338.014,144.618 337.724,144.560 337.451,144.446 336.411,143.709 335.707,143.318 335.032,143.025 334.400,142.814 333.616,142.630 332.887,142.532 332.203,142.501 328.620,142.500 327.781,142.544 327.006,142.663 326.315,142.836 325.575,143.097 324.864,143.429 324.128,143.870 323.500,144.341 322.972,144.818 322.443,145.398 321.972,146.026 321.566,146.697 321.199,147.473 320.938,148.213 320.750,148.976 320.639,149.753 320.603,150.482 320.595,161.272 320.488,161.699 320.349,161.958 320.163,162.186 319.809,162.448 319.537,162.560 319.102,162.625 304.639,162.626 303.991,162.654 303.298,162.742 302.569,162.902 287.731,166.878 287.020,167.104 286.376,167.374 285.772,167.689 272.711,175.222 272.288,175.342 271.994,175.352 271.704,175.304 271.428,175.201 271.179,175.045 270.873,174.729 263.244,161.531 263.116,161.244 263.051,160.936 263.101,103.499 263.165,103.063 263.278,102.792 263.442,102.548 263.768,102.252 264.165,102.065 264.601,102.000 278.785,102.000 279.524,101.966 280.274,101.862 281.078,101.668 281.727,101.445 282.418,101.135 283.136,100.723 283.696,100.327 284.272,99.836 284.846,99.240 285.314,98.645 285.688,98.070 286.042,97.401 286.401,96.549 286.564,96.303 286.891,96.005 287.290,95.815 287.728,95.750 298.169,95.750 298.955,95.711 299.616,95.620 300.333,95.455 301.097,95.200 301.769,94.901 302.352,94.578 303.451,93.804 303.724,93.690 304.014,93.632 315.169,93.625 315.955,93.586 316.616,93.495 317.333,93.330 318.097,93.075 318.769,92.776 319.352,92.453 320.451,91.679 320.867,91.529 321.161,91.500 337.194,91.507 337.481,91.564 337.751,91.675 338.331,92.105 338.969,92.522 339.787,92.941 340.499,93.216 341.309,93.438 342.139,93.575 343.038,93.625 353.762,93.625 354.053,93.653 354.465,93.800 354.708,93.961 354.916,94.166 355.309,94.727 355.787,95.297 356.374,95.871 357.016,96.382 357.707,96.824 358.440,97.193 359.207,97.485 359.999,97.697 360.886,97.835 361.687,97.875 387.102,97.875 387.395,97.904 387.676,97.989 387.935,98.128 388.163,98.314 388.349,98.542 388.488,98.801 388.573,99.082" fill="#000" opacity=".55" filter="url(#shadow)" transform="translate(1.5 3)"/>
-<polygon points="388.602,99.375 388.602,147.375 388.537,147.810 388.425,148.082 388.262,148.327 387.935,148.622 387.537,148.810 387.102,148.875 355.296,148.868 354.872,148.762 354.496,148.539 354.288,148.334 353.895,147.773 353.364,147.147 352.772,146.579 352.125,146.074 351.430,145.638 350.693,145.276 349.924,144.991 349.205,144.803 348.394,144.673 347.517,144.625 338.014,144.618 337.724,144.560 337.451,144.446 336.411,143.709 335.707,143.318 335.032,143.025 334.400,142.814 333.616,142.630 332.887,142.532 332.203,142.501 328.620,142.500 327.781,142.544 327.006,142.663 326.315,142.836 325.575,143.097 324.864,143.429 324.128,143.870 323.500,144.341 322.972,144.818 322.443,145.398 321.972,146.026 321.566,146.697 321.199,147.473 320.938,148.213 320.750,148.976 320.639,149.753 320.603,150.482 320.595,161.272 320.488,161.699 320.349,161.958 320.163,162.186 319.809,162.448 319.537,162.560 319.102,162.625 304.639,162.626 303.991,162.654 303.298,162.742 302.569,162.902 287.731,166.878 287.020,167.104 286.376,167.374 285.772,167.689 272.711,175.222 272.288,175.342 271.994,175.352 271.704,175.304 271.428,175.201 271.179,175.045 270.873,174.729 263.244,161.531 263.116,161.244 263.051,160.936 263.101,103.499 263.165,103.063 263.278,102.792 263.442,102.548 263.768,102.252 264.165,102.065 264.601,102.000 278.785,102.000 279.524,101.966 280.274,101.862 281.078,101.668 281.727,101.445 282.418,101.135 283.136,100.723 283.696,100.327 284.272,99.836 284.846,99.240 285.314,98.645 285.688,98.070 286.042,97.401 286.401,96.549 286.564,96.303 286.891,96.005 287.290,95.815 287.728,95.750 298.169,95.750 298.955,95.711 299.616,95.620 300.333,95.455 301.097,95.200 301.769,94.901 302.352,94.578 303.451,93.804 303.724,93.690 304.014,93.632 315.169,93.625 315.955,93.586 316.616,93.495 317.333,93.330 318.097,93.075 318.769,92.776 319.352,92.453 320.451,91.679 320.867,91.529 321.161,91.500 337.194,91.507 337.481,91.564 337.751,91.675 338.331,92.105 338.969,92.522 339.787,92.941 340.499,93.216 341.309,93.438 342.139,93.575 343.038,93.625 353.762,93.625 354.053,93.653 354.465,93.800 354.708,93.961 354.916,94.166 355.309,94.727 355.787,95.297 356.374,95.871 357.016,96.382 357.707,96.824 358.440,97.193 359.207,97.485 359.999,97.697 360.886,97.835 361.687,97.875 387.102,97.875 387.395,97.904 387.676,97.989 387.935,98.128 388.163,98.314 388.349,98.542 388.488,98.801 388.573,99.082" fill="url(#pcb)" stroke="#c9a227" stroke-width=".35"/>
-<polygon points="388.602,99.375 388.602,147.375 388.537,147.810 388.425,148.082 388.262,148.327 387.935,148.622 387.537,148.810 387.102,148.875 355.296,148.868 354.872,148.762 354.496,148.539 354.288,148.334 353.895,147.773 353.364,147.147 352.772,146.579 352.125,146.074 351.430,145.638 350.693,145.276 349.924,144.991 349.205,144.803 348.394,144.673 347.517,144.625 338.014,144.618 337.724,144.560 337.451,144.446 336.411,143.709 335.707,143.318 335.032,143.025 334.400,142.814 333.616,142.630 332.887,142.532 332.203,142.501 328.620,142.500 327.781,142.544 327.006,142.663 326.315,142.836 325.575,143.097 324.864,143.429 324.128,143.870 323.500,144.341 322.972,144.818 322.443,145.398 321.972,146.026 321.566,146.697 321.199,147.473 320.938,148.213 320.750,148.976 320.639,149.753 320.603,150.482 320.595,161.272 320.488,161.699 320.349,161.958 320.163,162.186 319.809,162.448 319.537,162.560 319.102,162.625 304.639,162.626 303.991,162.654 303.298,162.742 302.569,162.902 287.731,166.878 287.020,167.104 286.376,167.374 285.772,167.689 272.711,175.222 272.288,175.342 271.994,175.352 271.704,175.304 271.428,175.201 271.179,175.045 270.873,174.729 263.244,161.531 263.116,161.244 263.051,160.936 263.101,103.499 263.165,103.063 263.278,102.792 263.442,102.548 263.768,102.252 264.165,102.065 264.601,102.000 278.785,102.000 279.524,101.966 280.274,101.862 281.078,101.668 281.727,101.445 282.418,101.135 283.136,100.723 283.696,100.327 284.272,99.836 284.846,99.240 285.314,98.645 285.688,98.070 286.042,97.401 286.401,96.549 286.564,96.303 286.891,96.005 287.290,95.815 287.728,95.750 298.169,95.750 298.955,95.711 299.616,95.620 300.333,95.455 301.097,95.200 301.769,94.901 302.352,94.578 303.451,93.804 303.724,93.690 304.014,93.632 315.169,93.625 315.955,93.586 316.616,93.495 317.333,93.330 318.097,93.075 318.769,92.776 319.352,92.453 320.451,91.679 320.867,91.529 321.161,91.500 337.194,91.507 337.481,91.564 337.751,91.675 338.331,92.105 338.969,92.522 339.787,92.941 340.499,93.216 341.309,93.438 342.139,93.575 343.038,93.625 353.762,93.625 354.053,93.653 354.465,93.800 354.708,93.961 354.916,94.166 355.309,94.727 355.787,95.297 356.374,95.871 357.016,96.382 357.707,96.824 358.440,97.193 359.207,97.485 359.999,97.697 360.886,97.835 361.687,97.875 387.102,97.875 387.395,97.904 387.676,97.989 387.935,98.128 388.163,98.314 388.349,98.542 388.488,98.801 388.573,99.082" fill="none" stroke="#ffffff22" stroke-width=".2" transform="translate(-.15 -.15)"/>
-<text x="276.60" y="141.65" font-size="1.5" fill="#efe6ff" text-anchor="middle" font-weight="700" letter-spacing=".2">corne-pg1316s</text>
-<g transform="translate(275.102 113.750)">
-  <rect x="-8.9" y="-10.5" width="17.8" height="21" rx="1.2" fill="#000" opacity=".5" filter="url(#soft)" transform="translate(.5 1)"/>
-  <rect x="-8.9" y="-10.5" width="17.8" height="21" rx="1.2" fill="#1d1f22" stroke="#3a3d42" stroke-width=".2"/>
-  <rect x="-8.90" y="-8.32" width="1.6" height="1.4" rx=".3" fill="url(#gold)"/><circle cx="-8.90" cy="-7.62" r=".5" fill="#151515"/><rect x="7.30" y="-8.32" width="1.6" height="1.4" rx=".3" fill="url(#gold)"/><circle cx="8.90" cy="-7.62" r=".5" fill="#151515"/><rect x="-8.90" y="-5.78" width="1.6" height="1.4" rx=".3" fill="url(#gold)"/><circle cx="-8.90" cy="-5.08" r=".5" fill="#151515"/><rect x="7.30" y="-5.78" width="1.6" height="1.4" rx=".3" fill="url(#gold)"/><circle cx="8.90" cy="-5.08" r=".5" fill="#151515"/><rect x="-8.90" y="-3.24" width="1.6" height="1.4" rx=".3" fill="url(#gold)"/><circle cx="-8.90" cy="-2.54" r=".5" fill="#151515"/><rect x="7.30" y="-3.24" width="1.6" height="1.4" rx=".3" fill="url(#gold)"/><circle cx="8.90" cy="-2.54" r=".5" fill="#151515"/><rect x="-8.90" y="-0.70" width="1.6" height="1.4" rx=".3" fill="url(#gold)"/><circle cx="-8.90" cy="0.00" r=".5" fill="#151515"/><rect x="7.30" y="-0.70" width="1.6" height="1.4" rx=".3" fill="url(#gold)"/><circle cx="8.90" cy="0.00" r=".5" fill="#151515"/><rect x="-8.90" y="1.84" width="1.6" height="1.4" rx=".3" fill="url(#gold)"/><circle cx="-8.90" cy="2.54" r=".5" fill="#151515"/><rect x="7.30" y="1.84" width="1.6" height="1.4" rx=".3" fill="url(#gold)"/><circle cx="8.90" cy="2.54" r=".5" fill="#151515"/><rect x="-8.90" y="4.38" width="1.6" height="1.4" rx=".3" fill="url(#gold)"/><circle cx="-8.90" cy="5.08" r=".5" fill="#151515"/><rect x="7.30" y="4.38" width="1.6" height="1.4" rx=".3" fill="url(#gold)"/><circle cx="8.90" cy="5.08" r=".5" fill="#151515"/><rect x="-8.90" y="6.92" width="1.6" height="1.4" rx=".3" fill="url(#gold)"/><circle cx="-8.90" cy="7.62" r=".5" fill="#151515"/><rect x="7.30" y="6.92" width="1.6" height="1.4" rx=".3" fill="url(#gold)"/><circle cx="8.90" cy="7.62" r=".5" fill="#151515"/>
-  <rect x="-4.5" y="-12.1" width="9" height="5.6" rx="1.3" fill="url(#steel)" stroke="#777" stroke-width=".15"/>
-  <rect x="-3.4" y="-11.5" width="6.8" height="1.6" rx=".8" fill="#2a2a2a"/>
-  <rect x="-6.3" y="-3.6" width="12.6" height="11.6" rx=".5" fill="url(#steel)" stroke="#8a8a8a" stroke-width=".15"/>
-  <rect x="-5.6" y="-2.9" width="11.2" height="10.2" rx=".3" fill="none" stroke="#ffffff88" stroke-width=".15"/>
-  <text x="0" y="2" font-size="1.25" fill="#555" text-anchor="middle" font-weight="600">nRF52840</text>
-  <text x="0" y="3.7" font-size=".9" fill="#666" text-anchor="middle">Seeed Studio</text>
-  <rect x="5" y="-6.2" width="1.8" height="1.4" rx=".3" fill="#d9d9d9"/><circle cx="5.9" cy="-5.5" r=".4" fill="#999"/>
-  <rect x="-1.5" y="-5.6" width="1" height=".7" fill="#7cfc9a"/><rect x=".5" y="-5.6" width="1" height=".7" fill="#ff6b6b"/>
-  <rect x="-7.2" y="-6.4" width="2.4" height="2" rx=".3" fill="#2a2a2a"/>
-  <text x="0" y="9.6" font-size="1.4" fill="#cfcfcf" text-anchor="middle" font-weight="700">XIAO</text>
+<polygon points="394.500,99.375 394.500,147.375 394.435,147.810 394.323,148.082 394.160,148.327 393.833,148.622 393.435,148.810 393.000,148.875 361.194,148.868 360.770,148.762 360.394,148.539 360.186,148.334 359.793,147.773 359.262,147.147 358.670,146.579 358.023,146.074 357.328,145.638 356.591,145.276 355.822,144.991 355.103,144.803 354.292,144.673 353.415,144.625 343.912,144.618 343.622,144.560 343.349,144.446 342.309,143.709 341.605,143.318 340.930,143.025 340.298,142.814 339.514,142.630 338.785,142.532 338.101,142.501 334.518,142.500 333.679,142.544 332.904,142.663 332.213,142.836 331.473,143.097 330.762,143.429 330.026,143.870 329.398,144.341 328.870,144.818 328.341,145.398 327.870,146.026 327.464,146.697 327.097,147.473 326.836,148.213 326.648,148.976 326.537,149.753 326.501,150.482 326.493,161.272 326.386,161.699 326.247,161.958 326.061,162.186 325.707,162.448 325.435,162.560 325.000,162.625 310.537,162.626 309.889,162.654 309.196,162.742 308.467,162.902 293.629,166.878 292.918,167.104 292.274,167.374 291.670,167.689 278.609,175.222 278.186,175.342 277.892,175.352 277.602,175.304 277.326,175.201 277.077,175.045 276.771,174.729 269.073,161.411 268.963,161.174 268.895,160.921 266.026,144.589 266.000,144.243 266.000,103.500 266.065,103.065 266.177,102.793 266.340,102.548 266.667,102.253 267.065,102.065 267.500,102.000 284.683,102.000 285.422,101.966 286.172,101.862 286.976,101.668 287.625,101.445 288.316,101.135 289.034,100.723 289.594,100.327 290.170,99.836 290.744,99.240 291.212,98.645 291.586,98.070 291.940,97.401 292.299,96.549 292.462,96.303 292.789,96.005 293.188,95.815 293.626,95.750 304.067,95.750 304.853,95.711 305.514,95.620 306.231,95.455 306.995,95.200 307.667,94.901 308.250,94.578 309.349,93.804 309.622,93.690 309.912,93.632 321.067,93.625 321.853,93.586 322.514,93.495 323.231,93.330 323.995,93.075 324.667,92.776 325.250,92.453 326.349,91.679 326.765,91.529 327.059,91.500 343.092,91.507 343.379,91.564 343.649,91.675 344.229,92.105 344.867,92.522 345.685,92.941 346.397,93.216 347.207,93.438 348.037,93.575 348.936,93.625 359.660,93.625 359.951,93.653 360.363,93.800 360.606,93.961 360.814,94.166 361.207,94.727 361.685,95.297 362.272,95.871 362.914,96.382 363.605,96.824 364.338,97.193 365.105,97.485 365.897,97.697 366.784,97.835 367.585,97.875 393.000,97.875 393.293,97.904 393.574,97.989 393.833,98.128 394.061,98.314 394.247,98.542 394.386,98.801 394.471,99.082" fill="#000" opacity=".55" filter="url(#shadow)" transform="translate(1.5 3)"/>
+<polygon points="394.500,99.375 394.500,147.375 394.435,147.810 394.323,148.082 394.160,148.327 393.833,148.622 393.435,148.810 393.000,148.875 361.194,148.868 360.770,148.762 360.394,148.539 360.186,148.334 359.793,147.773 359.262,147.147 358.670,146.579 358.023,146.074 357.328,145.638 356.591,145.276 355.822,144.991 355.103,144.803 354.292,144.673 353.415,144.625 343.912,144.618 343.622,144.560 343.349,144.446 342.309,143.709 341.605,143.318 340.930,143.025 340.298,142.814 339.514,142.630 338.785,142.532 338.101,142.501 334.518,142.500 333.679,142.544 332.904,142.663 332.213,142.836 331.473,143.097 330.762,143.429 330.026,143.870 329.398,144.341 328.870,144.818 328.341,145.398 327.870,146.026 327.464,146.697 327.097,147.473 326.836,148.213 326.648,148.976 326.537,149.753 326.501,150.482 326.493,161.272 326.386,161.699 326.247,161.958 326.061,162.186 325.707,162.448 325.435,162.560 325.000,162.625 310.537,162.626 309.889,162.654 309.196,162.742 308.467,162.902 293.629,166.878 292.918,167.104 292.274,167.374 291.670,167.689 278.609,175.222 278.186,175.342 277.892,175.352 277.602,175.304 277.326,175.201 277.077,175.045 276.771,174.729 269.073,161.411 268.963,161.174 268.895,160.921 266.026,144.589 266.000,144.243 266.000,103.500 266.065,103.065 266.177,102.793 266.340,102.548 266.667,102.253 267.065,102.065 267.500,102.000 284.683,102.000 285.422,101.966 286.172,101.862 286.976,101.668 287.625,101.445 288.316,101.135 289.034,100.723 289.594,100.327 290.170,99.836 290.744,99.240 291.212,98.645 291.586,98.070 291.940,97.401 292.299,96.549 292.462,96.303 292.789,96.005 293.188,95.815 293.626,95.750 304.067,95.750 304.853,95.711 305.514,95.620 306.231,95.455 306.995,95.200 307.667,94.901 308.250,94.578 309.349,93.804 309.622,93.690 309.912,93.632 321.067,93.625 321.853,93.586 322.514,93.495 323.231,93.330 323.995,93.075 324.667,92.776 325.250,92.453 326.349,91.679 326.765,91.529 327.059,91.500 343.092,91.507 343.379,91.564 343.649,91.675 344.229,92.105 344.867,92.522 345.685,92.941 346.397,93.216 347.207,93.438 348.037,93.575 348.936,93.625 359.660,93.625 359.951,93.653 360.363,93.800 360.606,93.961 360.814,94.166 361.207,94.727 361.685,95.297 362.272,95.871 362.914,96.382 363.605,96.824 364.338,97.193 365.105,97.485 365.897,97.697 366.784,97.835 367.585,97.875 393.000,97.875 393.293,97.904 393.574,97.989 393.833,98.128 394.061,98.314 394.247,98.542 394.386,98.801 394.471,99.082" fill="url(#pcb)" stroke="#c9a227" stroke-width=".35"/>
+<polygon points="394.500,99.375 394.500,147.375 394.435,147.810 394.323,148.082 394.160,148.327 393.833,148.622 393.435,148.810 393.000,148.875 361.194,148.868 360.770,148.762 360.394,148.539 360.186,148.334 359.793,147.773 359.262,147.147 358.670,146.579 358.023,146.074 357.328,145.638 356.591,145.276 355.822,144.991 355.103,144.803 354.292,144.673 353.415,144.625 343.912,144.618 343.622,144.560 343.349,144.446 342.309,143.709 341.605,143.318 340.930,143.025 340.298,142.814 339.514,142.630 338.785,142.532 338.101,142.501 334.518,142.500 333.679,142.544 332.904,142.663 332.213,142.836 331.473,143.097 330.762,143.429 330.026,143.870 329.398,144.341 328.870,144.818 328.341,145.398 327.870,146.026 327.464,146.697 327.097,147.473 326.836,148.213 326.648,148.976 326.537,149.753 326.501,150.482 326.493,161.272 326.386,161.699 326.247,161.958 326.061,162.186 325.707,162.448 325.435,162.560 325.000,162.625 310.537,162.626 309.889,162.654 309.196,162.742 308.467,162.902 293.629,166.878 292.918,167.104 292.274,167.374 291.670,167.689 278.609,175.222 278.186,175.342 277.892,175.352 277.602,175.304 277.326,175.201 277.077,175.045 276.771,174.729 269.073,161.411 268.963,161.174 268.895,160.921 266.026,144.589 266.000,144.243 266.000,103.500 266.065,103.065 266.177,102.793 266.340,102.548 266.667,102.253 267.065,102.065 267.500,102.000 284.683,102.000 285.422,101.966 286.172,101.862 286.976,101.668 287.625,101.445 288.316,101.135 289.034,100.723 289.594,100.327 290.170,99.836 290.744,99.240 291.212,98.645 291.586,98.070 291.940,97.401 292.299,96.549 292.462,96.303 292.789,96.005 293.188,95.815 293.626,95.750 304.067,95.750 304.853,95.711 305.514,95.620 306.231,95.455 306.995,95.200 307.667,94.901 308.250,94.578 309.349,93.804 309.622,93.690 309.912,93.632 321.067,93.625 321.853,93.586 322.514,93.495 323.231,93.330 323.995,93.075 324.667,92.776 325.250,92.453 326.349,91.679 326.765,91.529 327.059,91.500 343.092,91.507 343.379,91.564 343.649,91.675 344.229,92.105 344.867,92.522 345.685,92.941 346.397,93.216 347.207,93.438 348.037,93.575 348.936,93.625 359.660,93.625 359.951,93.653 360.363,93.800 360.606,93.961 360.814,94.166 361.207,94.727 361.685,95.297 362.272,95.871 362.914,96.382 363.605,96.824 364.338,97.193 365.105,97.485 365.897,97.697 366.784,97.835 367.585,97.875 393.000,97.875 393.293,97.904 393.574,97.989 393.833,98.128 394.061,98.314 394.247,98.542 394.386,98.801 394.471,99.082" fill="none" stroke="#ffffff22" stroke-width=".2" transform="translate(-.15 -.15)"/>
+<text x="282.50" y="143.40" font-size="1.5" fill="#efe6ff" text-anchor="middle" font-weight="700" letter-spacing=".2">corne-pg1316s</text>
+<g transform="translate(282.000 119.000)">
+  <rect x="-9" y="-16.5" width="18" height="33" rx=".8" fill="#000" opacity=".5" filter="url(#soft)" transform="translate(.5 1)"/>
+  <rect x="-9" y="-16.5" width="18" height="33" rx=".8" fill="#14161a" stroke="#3a3d42" stroke-width=".2"/>
+  <rect x="-4.5" y="-17.7" width="9" height="3.6" rx="1.2" fill="url(#steel)" stroke="#777" stroke-width=".15"/>
+  <circle cx="-7.62" cy="-13.97" r=".75" fill="url(#gold)"/><circle cx="7.62" cy="-13.97" r=".75" fill="url(#gold)"/><circle cx="-7.62" cy="-11.43" r=".75" fill="url(#gold)"/><circle cx="7.62" cy="-11.43" r=".75" fill="url(#gold)"/><circle cx="-7.62" cy="-8.89" r=".75" fill="url(#gold)"/><circle cx="7.62" cy="-8.89" r=".75" fill="url(#gold)"/><circle cx="-7.62" cy="-6.35" r=".75" fill="url(#gold)"/><circle cx="7.62" cy="-6.35" r=".75" fill="url(#gold)"/><circle cx="-7.62" cy="-3.81" r=".75" fill="url(#gold)"/><circle cx="7.62" cy="-3.81" r=".75" fill="url(#gold)"/><circle cx="-7.62" cy="-1.27" r=".75" fill="url(#gold)"/><circle cx="7.62" cy="-1.27" r=".75" fill="url(#gold)"/><circle cx="-7.62" cy="1.27" r=".75" fill="url(#gold)"/><circle cx="7.62" cy="1.27" r=".75" fill="url(#gold)"/><circle cx="-7.62" cy="3.81" r=".75" fill="url(#gold)"/><circle cx="7.62" cy="3.81" r=".75" fill="url(#gold)"/><circle cx="-7.62" cy="6.35" r=".75" fill="url(#gold)"/><circle cx="7.62" cy="6.35" r=".75" fill="url(#gold)"/><circle cx="-7.62" cy="8.89" r=".75" fill="url(#gold)"/><circle cx="7.62" cy="8.89" r=".75" fill="url(#gold)"/><circle cx="-7.62" cy="11.43" r=".75" fill="url(#gold)"/><circle cx="7.62" cy="11.43" r=".75" fill="url(#gold)"/><circle cx="-7.62" cy="13.97" r=".75" fill="url(#gold)"/><circle cx="7.62" cy="13.97" r=".75" fill="url(#gold)"/>
+  <rect x="-7" y="-13.96" width="14" height="36" rx="1" fill="#000" opacity=".5" filter="url(#soft)" transform="translate(.6 1.2)"/>
+  <rect x="-7" y="-13.96" width="14" height="36" rx="1" fill="#1b1b1d" stroke="#444" stroke-width=".2"/>
+  <rect x="-6" y="-9.76" width="12" height="27.5" rx=".3" fill="#cfd3c8"/>
+  <text x="0" y="-4.96" font-size="2.4" fill="#222" text-anchor="middle" font-weight="700">87%</text>
+  <rect x="-3.2" y="-3.76" width="6.4" height="2.6" rx=".4" fill="none" stroke="#222" stroke-width=".35"/>
+  <rect x="-2.8" y="-3.36" width="4.8" height="1.8" fill="#222"/>
+  <text x="0" y="4.04" font-size="2" fill="#222" text-anchor="middle" font-weight="700">BT 1</text>
+  <circle cx="0" cy="8.54" r="2" fill="#222"/><text x="0" y="9.24" font-size="1.8" fill="#cfd3c8" text-anchor="middle" font-weight="700">1</text>
+  <text x="0" y="15.04" font-size="1.7" fill="#222" text-anchor="middle" font-weight="600">BASE</text>
+  <text x="0" y="20.64" font-size="1.1" fill="#999" text-anchor="middle">nice!view</text>
 </g>
-<circle cx="271.602" cy="131.000" r="1.6" fill="#a9a196" stroke="#2a1745" stroke-width=".35"/><circle cx="271.852" cy="131.300" r="1.2" fill="#8f877c"/>
+<circle cx="269.400" cy="114.500" r="1.6" fill="#a9a196" stroke="#2a1745" stroke-width=".35"/><circle cx="269.650" cy="114.800" r="1.2" fill="#8f877c"/>
 <g>
-  <rect x="275.652" y="128.150" width="7.4" height="5.75" rx=".4" fill="#000" opacity=".4" filter="url(#soft)" transform="translate(.4 .8)"/>
-  <rect x="275.652" y="128.150" width="7.4" height="5.75" rx=".4" fill="#f3efe4" stroke="#b9b2a2" stroke-width=".15"/>
-  <rect x="276.502" y="129.000" width="5.7" height="3.6" rx=".3" fill="#e4ddcc"/>
-  <path d="M278.102 130.500 C 279.102 135.500, 268.602 134.000, 271.202 131.000" stroke="#c62828" stroke-width=".7" fill="none" stroke-linecap="round"/>
-  <path d="M280.602 130.500 C 281.602 134.500, 269.602 133.000, 272.002 131.000" stroke="#1b1b1b" stroke-width=".7" fill="none" stroke-linecap="round"/>
-  <circle cx="278.102" cy="130.500" r=".55" fill="url(#gold)"/><circle cx="280.602" cy="130.500" r=".55" fill="url(#gold)"/>
+  <rect x="266.600" y="103.050" width="5.75" height="7.4" rx=".4" fill="#000" opacity=".4" filter="url(#soft)" transform="translate(.4 .8)"/>
+  <rect x="266.600" y="103.050" width="5.75" height="7.4" rx=".4" fill="#f3efe4" stroke="#b9b2a2" stroke-width=".15"/>
+  <rect x="267.450" y="103.900" width="3.6" height="5.7" rx=".3" fill="#e4ddcc"/>
+  <path d="M270.000 108.000 C 270.000 111.000, 269.400 111.500, 269.800 114.500" stroke="#c62828" stroke-width=".7" fill="none" stroke-linecap="round"/>
+  <path d="M269.200 105.500 C 267.500 109.000, 268.400 111.500, 269.000 114.500" stroke="#1b1b1b" stroke-width=".7" fill="none" stroke-linecap="round"/>
+  <circle cx="270.000" cy="108.000" r=".55" fill="url(#gold)"/><circle cx="270.000" cy="105.500" r=".55" fill="url(#gold)"/>
 </g>
-<g transform="translate(264.881 0) scale(-1 1)"><g transform="translate(0.000 138.381)">
+<g transform="translate(267.780 0) scale(-1 1)"><g transform="translate(0.000 121.500)">
   <rect x="-2" y="-3.8" width="4" height="7.6" rx=".4" fill="url(#steel)" stroke="#666" stroke-width=".15"/>
   <rect x="1.4" y="-1.8" width="1.8" height="1.6" rx=".3" fill="#1a1a1a"/>
 </g></g>
-<g transform="translate(380.102 106.375) rotate(0.00)">
-  <rect x="-8.25" y="-8.25" width="16.5" height="16.5" rx="2.4" fill="#000" opacity=".35" filter="url(#soft)" transform="translate(.6 1.1)"/>
-  <rect x="-8.25" y="-8.25" width="16.5" height="16.5" rx="2.4" fill="url(#capM)" stroke="#00000055" stroke-width=".25"/>
-  <rect x="-7.6" y="-7.5" width="15.2" height="14.2" rx="1.6" fill="#ffffff" opacity=".10"/>
-  <text x="0" y="0.80" font-size="2.3" fill="#2b2b2b" text-anchor="middle" font-weight="600">Bksp</text>
+<rect x="267.750" y="128.500" width="2.5" height="3" rx=".3" fill="url(#steel)" stroke="#666" stroke-width=".15"/><circle cx="269.000" cy="130.000" r=".7" fill="#2a2a2a"/>
+<g transform="translate(386.000 106.375) rotate(0.00)">
+  <rect x="-8" y="-8" width="16" height="16" rx="2" fill="#000" opacity=".3" filter="url(#soft)" transform="translate(.6 1.1)"/>
+  <circle cx="0" cy="-2.5" r="7.5" fill="hsl(290,100%,60%)" opacity=".85" filter="url(#glow)"/>
+  <rect x="-8" y="-8" width="16" height="16" rx="2" fill="#ffffff" fill-opacity=".38" stroke="#ffffff99" stroke-width=".3"/>
+  <rect x="-7.3" y="-7.3" width="14.6" height="13.6" rx="1.5" fill="#ffffff" opacity=".12"/>
+  <circle cx="0" cy="-2.5" r="1.6" fill="hsl(290,100%,85%)" opacity=".9" filter="url(#soft)"/>
+  <text x="0" y="2.80" font-size="2.3" fill="#1e1e1e" fill-opacity=".8" text-anchor="middle" font-weight="600">Bksp</text>
 </g>
-<g transform="translate(380.102 123.375) rotate(0.00)">
-  <rect x="-8.25" y="-8.25" width="16.5" height="16.5" rx="2.4" fill="#000" opacity=".35" filter="url(#soft)" transform="translate(.6 1.1)"/>
-  <rect x="-8.25" y="-8.25" width="16.5" height="16.5" rx="2.4" fill="url(#capM)" stroke="#00000055" stroke-width=".25"/>
-  <rect x="-7.6" y="-7.5" width="15.2" height="14.2" rx="1.6" fill="#ffffff" opacity=".10"/>
-  <text x="0" y="1.19" font-size="3.4" fill="#2b2b2b" text-anchor="middle" font-weight="600">'</text>
+<g transform="translate(386.000 123.375) rotate(0.00)">
+  <rect x="-8" y="-8" width="16" height="16" rx="2" fill="#000" opacity=".3" filter="url(#soft)" transform="translate(.6 1.1)"/>
+  <circle cx="0" cy="-2.5" r="7.5" fill="hsl(290,100%,60%)" opacity=".85" filter="url(#glow)"/>
+  <rect x="-8" y="-8" width="16" height="16" rx="2" fill="#ffffff" fill-opacity=".38" stroke="#ffffff99" stroke-width=".3"/>
+  <rect x="-7.3" y="-7.3" width="14.6" height="13.6" rx="1.5" fill="#ffffff" opacity=".12"/>
+  <circle cx="0" cy="-2.5" r="1.6" fill="hsl(290,100%,85%)" opacity=".9" filter="url(#soft)"/>
+  <text x="0" y="3.19" font-size="3.4" fill="#1e1e1e" fill-opacity=".8" text-anchor="middle" font-weight="600">'</text>
 </g>
-<g transform="translate(380.102 140.375) rotate(0.00)">
-  <rect x="-8.25" y="-8.25" width="16.5" height="16.5" rx="2.4" fill="#000" opacity=".35" filter="url(#soft)" transform="translate(.6 1.1)"/>
-  <rect x="-8.25" y="-8.25" width="16.5" height="16.5" rx="2.4" fill="url(#capM)" stroke="#00000055" stroke-width=".25"/>
-  <rect x="-7.6" y="-7.5" width="15.2" height="14.2" rx="1.6" fill="#ffffff" opacity=".10"/>
-  <text x="0" y="0.80" font-size="2.3" fill="#2b2b2b" text-anchor="middle" font-weight="600">Esc</text>
+<g transform="translate(386.000 140.375) rotate(0.00)">
+  <rect x="-8" y="-8" width="16" height="16" rx="2" fill="#000" opacity=".3" filter="url(#soft)" transform="translate(.6 1.1)"/>
+  <circle cx="0" cy="-2.5" r="7.5" fill="hsl(290,100%,60%)" opacity=".85" filter="url(#glow)"/>
+  <rect x="-8" y="-8" width="16" height="16" rx="2" fill="#ffffff" fill-opacity=".38" stroke="#ffffff99" stroke-width=".3"/>
+  <rect x="-7.3" y="-7.3" width="14.6" height="13.6" rx="1.5" fill="#ffffff" opacity=".12"/>
+  <circle cx="0" cy="-2.5" r="1.6" fill="hsl(290,100%,85%)" opacity=".9" filter="url(#soft)"/>
+  <text x="0" y="2.80" font-size="2.3" fill="#1e1e1e" fill-opacity=".8" text-anchor="middle" font-weight="600">Esc</text>
 </g>
-<g transform="translate(363.102 106.375) rotate(0.00)">
-  <rect x="-8.25" y="-8.25" width="16.5" height="16.5" rx="2.4" fill="#000" opacity=".35" filter="url(#soft)" transform="translate(.6 1.1)"/>
-  <rect x="-8.25" y="-8.25" width="16.5" height="16.5" rx="2.4" fill="url(#capA)" stroke="#00000055" stroke-width=".25"/>
-  <rect x="-7.6" y="-7.5" width="15.2" height="14.2" rx="1.6" fill="#ffffff" opacity=".10"/>
-  <text x="0" y="1.19" font-size="3.4" fill="#2b2b2b" text-anchor="middle" font-weight="600">P</text>
+<g transform="translate(369.000 106.375) rotate(0.00)">
+  <rect x="-8" y="-8" width="16" height="16" rx="2" fill="#000" opacity=".3" filter="url(#soft)" transform="translate(.6 1.1)"/>
+  <circle cx="0" cy="-2.5" r="7.5" fill="hsl(270,100%,60%)" opacity=".85" filter="url(#glow)"/>
+  <rect x="-8" y="-8" width="16" height="16" rx="2" fill="#ffffff" fill-opacity=".38" stroke="#ffffff99" stroke-width=".3"/>
+  <rect x="-7.3" y="-7.3" width="14.6" height="13.6" rx="1.5" fill="#ffffff" opacity=".12"/>
+  <circle cx="0" cy="-2.5" r="1.6" fill="hsl(270,100%,85%)" opacity=".9" filter="url(#soft)"/>
+  <text x="0" y="3.19" font-size="3.4" fill="#1e1e1e" fill-opacity=".8" text-anchor="middle" font-weight="600">P</text>
 </g>
-<g transform="translate(363.102 123.375) rotate(0.00)">
-  <rect x="-8.25" y="-8.25" width="16.5" height="16.5" rx="2.4" fill="#000" opacity=".35" filter="url(#soft)" transform="translate(.6 1.1)"/>
-  <rect x="-8.25" y="-8.25" width="16.5" height="16.5" rx="2.4" fill="url(#capA)" stroke="#00000055" stroke-width=".25"/>
-  <rect x="-7.6" y="-7.5" width="15.2" height="14.2" rx="1.6" fill="#ffffff" opacity=".10"/>
-  <text x="0" y="1.19" font-size="3.4" fill="#2b2b2b" text-anchor="middle" font-weight="600">;</text>
+<g transform="translate(369.000 123.375) rotate(0.00)">
+  <rect x="-8" y="-8" width="16" height="16" rx="2" fill="#000" opacity=".3" filter="url(#soft)" transform="translate(.6 1.1)"/>
+  <circle cx="0" cy="-2.5" r="7.5" fill="hsl(270,100%,60%)" opacity=".85" filter="url(#glow)"/>
+  <rect x="-8" y="-8" width="16" height="16" rx="2" fill="#ffffff" fill-opacity=".38" stroke="#ffffff99" stroke-width=".3"/>
+  <rect x="-7.3" y="-7.3" width="14.6" height="13.6" rx="1.5" fill="#ffffff" opacity=".12"/>
+  <circle cx="0" cy="-2.5" r="1.6" fill="hsl(270,100%,85%)" opacity=".9" filter="url(#soft)"/>
+  <text x="0" y="3.19" font-size="3.4" fill="#1e1e1e" fill-opacity=".8" text-anchor="middle" font-weight="600">;</text>
 </g>
-<g transform="translate(363.102 140.375) rotate(0.00)">
-  <rect x="-8.25" y="-8.25" width="16.5" height="16.5" rx="2.4" fill="#000" opacity=".35" filter="url(#soft)" transform="translate(.6 1.1)"/>
-  <rect x="-8.25" y="-8.25" width="16.5" height="16.5" rx="2.4" fill="url(#capA)" stroke="#00000055" stroke-width=".25"/>
-  <rect x="-7.6" y="-7.5" width="15.2" height="14.2" rx="1.6" fill="#ffffff" opacity=".10"/>
-  <text x="0" y="1.19" font-size="3.4" fill="#2b2b2b" text-anchor="middle" font-weight="600">/</text>
+<g transform="translate(369.000 140.375) rotate(0.00)">
+  <rect x="-8" y="-8" width="16" height="16" rx="2" fill="#000" opacity=".3" filter="url(#soft)" transform="translate(.6 1.1)"/>
+  <circle cx="0" cy="-2.5" r="7.5" fill="hsl(270,100%,60%)" opacity=".85" filter="url(#glow)"/>
+  <rect x="-8" y="-8" width="16" height="16" rx="2" fill="#ffffff" fill-opacity=".38" stroke="#ffffff99" stroke-width=".3"/>
+  <rect x="-7.3" y="-7.3" width="14.6" height="13.6" rx="1.5" fill="#ffffff" opacity=".12"/>
+  <circle cx="0" cy="-2.5" r="1.6" fill="hsl(270,100%,85%)" opacity=".9" filter="url(#soft)"/>
+  <text x="0" y="3.19" font-size="3.4" fill="#1e1e1e" fill-opacity=".8" text-anchor="middle" font-weight="600">/</text>
 </g>
-<g transform="translate(346.102 102.125) rotate(0.00)">
-  <rect x="-8.25" y="-8.25" width="16.5" height="16.5" rx="2.4" fill="#000" opacity=".35" filter="url(#soft)" transform="translate(.6 1.1)"/>
-  <rect x="-8.25" y="-8.25" width="16.5" height="16.5" rx="2.4" fill="url(#capA)" stroke="#00000055" stroke-width=".25"/>
-  <rect x="-7.6" y="-7.5" width="15.2" height="14.2" rx="1.6" fill="#ffffff" opacity=".10"/>
-  <text x="0" y="1.19" font-size="3.4" fill="#2b2b2b" text-anchor="middle" font-weight="600">O</text>
+<g transform="translate(352.000 102.125) rotate(0.00)">
+  <rect x="-8" y="-8" width="16" height="16" rx="2" fill="#000" opacity=".3" filter="url(#soft)" transform="translate(.6 1.1)"/>
+  <circle cx="0" cy="-2.5" r="7.5" fill="hsl(250,100%,60%)" opacity=".85" filter="url(#glow)"/>
+  <rect x="-8" y="-8" width="16" height="16" rx="2" fill="#ffffff" fill-opacity=".38" stroke="#ffffff99" stroke-width=".3"/>
+  <rect x="-7.3" y="-7.3" width="14.6" height="13.6" rx="1.5" fill="#ffffff" opacity=".12"/>
+  <circle cx="0" cy="-2.5" r="1.6" fill="hsl(250,100%,85%)" opacity=".9" filter="url(#soft)"/>
+  <text x="0" y="3.19" font-size="3.4" fill="#1e1e1e" fill-opacity=".8" text-anchor="middle" font-weight="600">O</text>
 </g>
-<g transform="translate(346.102 119.125) rotate(0.00)">
-  <rect x="-8.25" y="-8.25" width="16.5" height="16.5" rx="2.4" fill="#000" opacity=".35" filter="url(#soft)" transform="translate(.6 1.1)"/>
-  <rect x="-8.25" y="-8.25" width="16.5" height="16.5" rx="2.4" fill="url(#capA)" stroke="#00000055" stroke-width=".25"/>
-  <rect x="-7.6" y="-7.5" width="15.2" height="14.2" rx="1.6" fill="#ffffff" opacity=".10"/>
-  <text x="0" y="1.19" font-size="3.4" fill="#2b2b2b" text-anchor="middle" font-weight="600">L</text>
+<g transform="translate(352.000 119.125) rotate(0.00)">
+  <rect x="-8" y="-8" width="16" height="16" rx="2" fill="#000" opacity=".3" filter="url(#soft)" transform="translate(.6 1.1)"/>
+  <circle cx="0" cy="-2.5" r="7.5" fill="hsl(250,100%,60%)" opacity=".85" filter="url(#glow)"/>
+  <rect x="-8" y="-8" width="16" height="16" rx="2" fill="#ffffff" fill-opacity=".38" stroke="#ffffff99" stroke-width=".3"/>
+  <rect x="-7.3" y="-7.3" width="14.6" height="13.6" rx="1.5" fill="#ffffff" opacity=".12"/>
+  <circle cx="0" cy="-2.5" r="1.6" fill="hsl(250,100%,85%)" opacity=".9" filter="url(#soft)"/>
+  <text x="0" y="3.19" font-size="3.4" fill="#1e1e1e" fill-opacity=".8" text-anchor="middle" font-weight="600">L</text>
 </g>
-<g transform="translate(346.102 136.125) rotate(0.00)">
-  <rect x="-8.25" y="-8.25" width="16.5" height="16.5" rx="2.4" fill="#000" opacity=".35" filter="url(#soft)" transform="translate(.6 1.1)"/>
-  <rect x="-8.25" y="-8.25" width="16.5" height="16.5" rx="2.4" fill="url(#capA)" stroke="#00000055" stroke-width=".25"/>
-  <rect x="-7.6" y="-7.5" width="15.2" height="14.2" rx="1.6" fill="#ffffff" opacity=".10"/>
-  <text x="0" y="1.19" font-size="3.4" fill="#2b2b2b" text-anchor="middle" font-weight="600">.</text>
+<g transform="translate(352.000 136.125) rotate(0.00)">
+  <rect x="-8" y="-8" width="16" height="16" rx="2" fill="#000" opacity=".3" filter="url(#soft)" transform="translate(.6 1.1)"/>
+  <circle cx="0" cy="-2.5" r="7.5" fill="hsl(250,100%,60%)" opacity=".85" filter="url(#glow)"/>
+  <rect x="-8" y="-8" width="16" height="16" rx="2" fill="#ffffff" fill-opacity=".38" stroke="#ffffff99" stroke-width=".3"/>
+  <rect x="-7.3" y="-7.3" width="14.6" height="13.6" rx="1.5" fill="#ffffff" opacity=".12"/>
+  <circle cx="0" cy="-2.5" r="1.6" fill="hsl(250,100%,85%)" opacity=".9" filter="url(#soft)"/>
+  <text x="0" y="3.19" font-size="3.4" fill="#1e1e1e" fill-opacity=".8" text-anchor="middle" font-weight="600">.</text>
 </g>
-<g transform="translate(329.102 100.000) rotate(0.00)">
-  <rect x="-8.25" y="-8.25" width="16.5" height="16.5" rx="2.4" fill="#000" opacity=".35" filter="url(#soft)" transform="translate(.6 1.1)"/>
-  <rect x="-8.25" y="-8.25" width="16.5" height="16.5" rx="2.4" fill="url(#capA)" stroke="#00000055" stroke-width=".25"/>
-  <rect x="-7.6" y="-7.5" width="15.2" height="14.2" rx="1.6" fill="#ffffff" opacity=".10"/>
-  <text x="0" y="1.19" font-size="3.4" fill="#2b2b2b" text-anchor="middle" font-weight="600">I</text>
+<g transform="translate(335.000 100.000) rotate(0.00)">
+  <rect x="-8" y="-8" width="16" height="16" rx="2" fill="#000" opacity=".3" filter="url(#soft)" transform="translate(.6 1.1)"/>
+  <circle cx="0" cy="-2.5" r="7.5" fill="hsl(231,100%,60%)" opacity=".85" filter="url(#glow)"/>
+  <rect x="-8" y="-8" width="16" height="16" rx="2" fill="#ffffff" fill-opacity=".38" stroke="#ffffff99" stroke-width=".3"/>
+  <rect x="-7.3" y="-7.3" width="14.6" height="13.6" rx="1.5" fill="#ffffff" opacity=".12"/>
+  <circle cx="0" cy="-2.5" r="1.6" fill="hsl(231,100%,85%)" opacity=".9" filter="url(#soft)"/>
+  <text x="0" y="3.19" font-size="3.4" fill="#1e1e1e" fill-opacity=".8" text-anchor="middle" font-weight="600">I</text>
 </g>
-<g transform="translate(329.102 117.000) rotate(0.00)">
-  <rect x="-8.25" y="-8.25" width="16.5" height="16.5" rx="2.4" fill="#000" opacity=".35" filter="url(#soft)" transform="translate(.6 1.1)"/>
-  <rect x="-8.25" y="-8.25" width="16.5" height="16.5" rx="2.4" fill="url(#capA)" stroke="#00000055" stroke-width=".25"/>
-  <rect x="-7.6" y="-7.5" width="15.2" height="14.2" rx="1.6" fill="#ffffff" opacity=".10"/>
-  <text x="0" y="1.19" font-size="3.4" fill="#2b2b2b" text-anchor="middle" font-weight="600">K</text>
+<g transform="translate(335.000 117.000) rotate(0.00)">
+  <rect x="-8" y="-8" width="16" height="16" rx="2" fill="#000" opacity=".3" filter="url(#soft)" transform="translate(.6 1.1)"/>
+  <circle cx="0" cy="-2.5" r="7.5" fill="hsl(231,100%,60%)" opacity=".85" filter="url(#glow)"/>
+  <rect x="-8" y="-8" width="16" height="16" rx="2" fill="#ffffff" fill-opacity=".38" stroke="#ffffff99" stroke-width=".3"/>
+  <rect x="-7.3" y="-7.3" width="14.6" height="13.6" rx="1.5" fill="#ffffff" opacity=".12"/>
+  <circle cx="0" cy="-2.5" r="1.6" fill="hsl(231,100%,85%)" opacity=".9" filter="url(#soft)"/>
+  <text x="0" y="3.19" font-size="3.4" fill="#1e1e1e" fill-opacity=".8" text-anchor="middle" font-weight="600">K</text>
 </g>
-<g transform="translate(329.102 134.000) rotate(0.00)">
-  <rect x="-8.25" y="-8.25" width="16.5" height="16.5" rx="2.4" fill="#000" opacity=".35" filter="url(#soft)" transform="translate(.6 1.1)"/>
-  <rect x="-8.25" y="-8.25" width="16.5" height="16.5" rx="2.4" fill="url(#capA)" stroke="#00000055" stroke-width=".25"/>
-  <rect x="-7.6" y="-7.5" width="15.2" height="14.2" rx="1.6" fill="#ffffff" opacity=".10"/>
-  <text x="0" y="1.19" font-size="3.4" fill="#2b2b2b" text-anchor="middle" font-weight="600">,</text>
+<g transform="translate(335.000 134.000) rotate(0.00)">
+  <rect x="-8" y="-8" width="16" height="16" rx="2" fill="#000" opacity=".3" filter="url(#soft)" transform="translate(.6 1.1)"/>
+  <circle cx="0" cy="-2.5" r="7.5" fill="hsl(231,100%,60%)" opacity=".85" filter="url(#glow)"/>
+  <rect x="-8" y="-8" width="16" height="16" rx="2" fill="#ffffff" fill-opacity=".38" stroke="#ffffff99" stroke-width=".3"/>
+  <rect x="-7.3" y="-7.3" width="14.6" height="13.6" rx="1.5" fill="#ffffff" opacity=".12"/>
+  <circle cx="0" cy="-2.5" r="1.6" fill="hsl(231,100%,85%)" opacity=".9" filter="url(#soft)"/>
+  <text x="0" y="3.19" font-size="3.4" fill="#1e1e1e" fill-opacity=".8" text-anchor="middle" font-weight="600">,</text>
 </g>
-<g transform="translate(312.102 102.125) rotate(0.00)">
-  <rect x="-8.25" y="-8.25" width="16.5" height="16.5" rx="2.4" fill="#000" opacity=".35" filter="url(#soft)" transform="translate(.6 1.1)"/>
-  <rect x="-8.25" y="-8.25" width="16.5" height="16.5" rx="2.4" fill="url(#capA)" stroke="#00000055" stroke-width=".25"/>
-  <rect x="-7.6" y="-7.5" width="15.2" height="14.2" rx="1.6" fill="#ffffff" opacity=".10"/>
-  <text x="0" y="1.19" font-size="3.4" fill="#2b2b2b" text-anchor="middle" font-weight="600">U</text>
+<g transform="translate(318.000 102.125) rotate(0.00)">
+  <rect x="-8" y="-8" width="16" height="16" rx="2" fill="#000" opacity=".3" filter="url(#soft)" transform="translate(.6 1.1)"/>
+  <circle cx="0" cy="-2.5" r="7.5" fill="hsl(211,100%,60%)" opacity=".85" filter="url(#glow)"/>
+  <rect x="-8" y="-8" width="16" height="16" rx="2" fill="#ffffff" fill-opacity=".38" stroke="#ffffff99" stroke-width=".3"/>
+  <rect x="-7.3" y="-7.3" width="14.6" height="13.6" rx="1.5" fill="#ffffff" opacity=".12"/>
+  <circle cx="0" cy="-2.5" r="1.6" fill="hsl(211,100%,85%)" opacity=".9" filter="url(#soft)"/>
+  <text x="0" y="3.19" font-size="3.4" fill="#1e1e1e" fill-opacity=".8" text-anchor="middle" font-weight="600">U</text>
 </g>
-<g transform="translate(312.102 119.125) rotate(0.00)">
-  <rect x="-8.25" y="-8.25" width="16.5" height="16.5" rx="2.4" fill="#000" opacity=".35" filter="url(#soft)" transform="translate(.6 1.1)"/>
-  <rect x="-8.25" y="-8.25" width="16.5" height="16.5" rx="2.4" fill="url(#capA)" stroke="#00000055" stroke-width=".25"/>
-  <rect x="-7.6" y="-7.5" width="15.2" height="14.2" rx="1.6" fill="#ffffff" opacity=".10"/>
-  <text x="0" y="1.19" font-size="3.4" fill="#2b2b2b" text-anchor="middle" font-weight="600">J</text>
+<g transform="translate(318.000 119.125) rotate(0.00)">
+  <rect x="-8" y="-8" width="16" height="16" rx="2" fill="#000" opacity=".3" filter="url(#soft)" transform="translate(.6 1.1)"/>
+  <circle cx="0" cy="-2.5" r="7.5" fill="hsl(211,100%,60%)" opacity=".85" filter="url(#glow)"/>
+  <rect x="-8" y="-8" width="16" height="16" rx="2" fill="#ffffff" fill-opacity=".38" stroke="#ffffff99" stroke-width=".3"/>
+  <rect x="-7.3" y="-7.3" width="14.6" height="13.6" rx="1.5" fill="#ffffff" opacity=".12"/>
+  <circle cx="0" cy="-2.5" r="1.6" fill="hsl(211,100%,85%)" opacity=".9" filter="url(#soft)"/>
+  <text x="0" y="3.19" font-size="3.4" fill="#1e1e1e" fill-opacity=".8" text-anchor="middle" font-weight="600">J</text>
 </g>
-<g transform="translate(312.102 136.125) rotate(0.00)">
-  <rect x="-8.25" y="-8.25" width="16.5" height="16.5" rx="2.4" fill="#000" opacity=".35" filter="url(#soft)" transform="translate(.6 1.1)"/>
-  <rect x="-8.25" y="-8.25" width="16.5" height="16.5" rx="2.4" fill="url(#capA)" stroke="#00000055" stroke-width=".25"/>
-  <rect x="-7.6" y="-7.5" width="15.2" height="14.2" rx="1.6" fill="#ffffff" opacity=".10"/>
-  <text x="0" y="1.19" font-size="3.4" fill="#2b2b2b" text-anchor="middle" font-weight="600">M</text>
+<g transform="translate(318.000 136.125) rotate(0.00)">
+  <rect x="-8" y="-8" width="16" height="16" rx="2" fill="#000" opacity=".3" filter="url(#soft)" transform="translate(.6 1.1)"/>
+  <circle cx="0" cy="-2.5" r="7.5" fill="hsl(211,100%,60%)" opacity=".85" filter="url(#glow)"/>
+  <rect x="-8" y="-8" width="16" height="16" rx="2" fill="#ffffff" fill-opacity=".38" stroke="#ffffff99" stroke-width=".3"/>
+  <rect x="-7.3" y="-7.3" width="14.6" height="13.6" rx="1.5" fill="#ffffff" opacity=".12"/>
+  <circle cx="0" cy="-2.5" r="1.6" fill="hsl(211,100%,85%)" opacity=".9" filter="url(#soft)"/>
+  <text x="0" y="3.19" font-size="3.4" fill="#1e1e1e" fill-opacity=".8" text-anchor="middle" font-weight="600">M</text>
 </g>
-<g transform="translate(295.102 104.250) rotate(0.00)">
-  <rect x="-8.25" y="-8.25" width="16.5" height="16.5" rx="2.4" fill="#000" opacity=".35" filter="url(#soft)" transform="translate(.6 1.1)"/>
-  <rect x="-8.25" y="-8.25" width="16.5" height="16.5" rx="2.4" fill="url(#capA)" stroke="#00000055" stroke-width=".25"/>
-  <rect x="-7.6" y="-7.5" width="15.2" height="14.2" rx="1.6" fill="#ffffff" opacity=".10"/>
-  <text x="0" y="1.19" font-size="3.4" fill="#2b2b2b" text-anchor="middle" font-weight="600">Y</text>
+<g transform="translate(301.000 104.250) rotate(0.00)">
+  <rect x="-8" y="-8" width="16" height="16" rx="2" fill="#000" opacity=".3" filter="url(#soft)" transform="translate(.6 1.1)"/>
+  <circle cx="0" cy="-2.5" r="7.5" fill="hsl(191,100%,60%)" opacity=".85" filter="url(#glow)"/>
+  <rect x="-8" y="-8" width="16" height="16" rx="2" fill="#ffffff" fill-opacity=".38" stroke="#ffffff99" stroke-width=".3"/>
+  <rect x="-7.3" y="-7.3" width="14.6" height="13.6" rx="1.5" fill="#ffffff" opacity=".12"/>
+  <circle cx="0" cy="-2.5" r="1.6" fill="hsl(191,100%,85%)" opacity=".9" filter="url(#soft)"/>
+  <text x="0" y="3.19" font-size="3.4" fill="#1e1e1e" fill-opacity=".8" text-anchor="middle" font-weight="600">Y</text>
 </g>
-<g transform="translate(295.102 121.250) rotate(0.00)">
-  <rect x="-8.25" y="-8.25" width="16.5" height="16.5" rx="2.4" fill="#000" opacity=".35" filter="url(#soft)" transform="translate(.6 1.1)"/>
-  <rect x="-8.25" y="-8.25" width="16.5" height="16.5" rx="2.4" fill="url(#capA)" stroke="#00000055" stroke-width=".25"/>
-  <rect x="-7.6" y="-7.5" width="15.2" height="14.2" rx="1.6" fill="#ffffff" opacity=".10"/>
-  <text x="0" y="1.19" font-size="3.4" fill="#2b2b2b" text-anchor="middle" font-weight="600">H</text>
+<g transform="translate(301.000 121.250) rotate(0.00)">
+  <rect x="-8" y="-8" width="16" height="16" rx="2" fill="#000" opacity=".3" filter="url(#soft)" transform="translate(.6 1.1)"/>
+  <circle cx="0" cy="-2.5" r="7.5" fill="hsl(191,100%,60%)" opacity=".85" filter="url(#glow)"/>
+  <rect x="-8" y="-8" width="16" height="16" rx="2" fill="#ffffff" fill-opacity=".38" stroke="#ffffff99" stroke-width=".3"/>
+  <rect x="-7.3" y="-7.3" width="14.6" height="13.6" rx="1.5" fill="#ffffff" opacity=".12"/>
+  <circle cx="0" cy="-2.5" r="1.6" fill="hsl(191,100%,85%)" opacity=".9" filter="url(#soft)"/>
+  <text x="0" y="3.19" font-size="3.4" fill="#1e1e1e" fill-opacity=".8" text-anchor="middle" font-weight="600">H</text>
 </g>
-<g transform="translate(295.102 138.250) rotate(0.00)">
-  <rect x="-8.25" y="-8.25" width="16.5" height="16.5" rx="2.4" fill="#000" opacity=".35" filter="url(#soft)" transform="translate(.6 1.1)"/>
-  <rect x="-8.25" y="-8.25" width="16.5" height="16.5" rx="2.4" fill="url(#capA)" stroke="#00000055" stroke-width=".25"/>
-  <rect x="-7.6" y="-7.5" width="15.2" height="14.2" rx="1.6" fill="#ffffff" opacity=".10"/>
-  <text x="0" y="1.19" font-size="3.4" fill="#2b2b2b" text-anchor="middle" font-weight="600">N</text>
+<g transform="translate(301.000 138.250) rotate(0.00)">
+  <rect x="-8" y="-8" width="16" height="16" rx="2" fill="#000" opacity=".3" filter="url(#soft)" transform="translate(.6 1.1)"/>
+  <circle cx="0" cy="-2.5" r="7.5" fill="hsl(191,100%,60%)" opacity=".85" filter="url(#glow)"/>
+  <rect x="-8" y="-8" width="16" height="16" rx="2" fill="#ffffff" fill-opacity=".38" stroke="#ffffff99" stroke-width=".3"/>
+  <rect x="-7.3" y="-7.3" width="14.6" height="13.6" rx="1.5" fill="#ffffff" opacity=".12"/>
+  <circle cx="0" cy="-2.5" r="1.6" fill="hsl(191,100%,85%)" opacity=".9" filter="url(#soft)"/>
+  <text x="0" y="3.19" font-size="3.4" fill="#1e1e1e" fill-opacity=".8" text-anchor="middle" font-weight="600">N</text>
 </g>
-<g transform="translate(312.102 154.125) rotate(0.00)">
-  <rect x="-8.25" y="-8.25" width="16.5" height="16.5" rx="2.4" fill="#000" opacity=".35" filter="url(#soft)" transform="translate(.6 1.1)"/>
-  <rect x="-8.25" y="-8.25" width="16.5" height="16.5" rx="2.4" fill="url(#capT)" stroke="#00000055" stroke-width=".25"/>
-  <rect x="-7.6" y="-7.5" width="15.2" height="14.2" rx="1.6" fill="#ffffff" opacity=".10"/>
-  <text x="0" y="0.80" font-size="2.3" fill="#f7f3ea" text-anchor="middle" font-weight="600">Alt</text>
+<g transform="translate(318.000 154.125) rotate(0.00)">
+  <rect x="-8" y="-8" width="16" height="16" rx="2" fill="#000" opacity=".3" filter="url(#soft)" transform="translate(.6 1.1)"/>
+  <circle cx="0" cy="-2.5" r="7.5" fill="hsl(211,100%,60%)" opacity=".85" filter="url(#glow)"/>
+  <rect x="-8" y="-8" width="16" height="16" rx="2" fill="#ffffff" fill-opacity=".38" stroke="#ffffff99" stroke-width=".3"/>
+  <rect x="-7.3" y="-7.3" width="14.6" height="13.6" rx="1.5" fill="#ffffff" opacity=".12"/>
+  <circle cx="0" cy="-2.5" r="1.6" fill="hsl(211,100%,85%)" opacity=".9" filter="url(#soft)"/>
+  <text x="0" y="2.80" font-size="2.3" fill="#1e1e1e" fill-opacity=".8" text-anchor="middle" font-weight="600">Alt</text>
 </g>
-<g transform="translate(292.709 156.744) rotate(-15.00)">
-  <rect x="-8.25" y="-8.25" width="16.5" height="16.5" rx="2.4" fill="#000" opacity=".35" filter="url(#soft)" transform="translate(.6 1.1)"/>
-  <rect x="-8.25" y="-8.25" width="16.5" height="16.5" rx="2.4" fill="url(#capT)" stroke="#00000055" stroke-width=".25"/>
-  <rect x="-7.6" y="-7.5" width="15.2" height="14.2" rx="1.6" fill="#ffffff" opacity=".10"/>
-  <text x="0" y="0.80" font-size="2.3" fill="#f7f3ea" text-anchor="middle" font-weight="600">Raise</text>
+<g transform="translate(298.607 156.744) rotate(-15.00)">
+  <rect x="-8" y="-8" width="16" height="16" rx="2" fill="#000" opacity=".3" filter="url(#soft)" transform="translate(.6 1.1)"/>
+  <circle cx="0" cy="-2.5" r="7.5" fill="hsl(188,100%,60%)" opacity=".85" filter="url(#glow)"/>
+  <rect x="-8" y="-8" width="16" height="16" rx="2" fill="#ffffff" fill-opacity=".38" stroke="#ffffff99" stroke-width=".3"/>
+  <rect x="-7.3" y="-7.3" width="14.6" height="13.6" rx="1.5" fill="#ffffff" opacity=".12"/>
+  <circle cx="0" cy="-2.5" r="1.6" fill="hsl(188,100%,85%)" opacity=".9" filter="url(#soft)"/>
+  <text x="0" y="2.80" font-size="2.3" fill="#1e1e1e" fill-opacity=".8" text-anchor="middle" font-weight="600">Raise</text>
 </g>
-<g transform="translate(274.654 164.293) rotate(-30.00)">
-  <rect x="-8.25" y="-8.25" width="16.5" height="16.5" rx="2.4" fill="#000" opacity=".35" filter="url(#soft)" transform="translate(.6 1.1)"/>
-  <rect x="-8.25" y="-8.25" width="16.5" height="16.5" rx="2.4" fill="url(#capT)" stroke="#00000055" stroke-width=".25"/>
-  <rect x="-7.6" y="-7.5" width="15.2" height="14.2" rx="1.6" fill="#ffffff" opacity=".10"/>
-  <text x="0" y="0.80" font-size="2.3" fill="#f7f3ea" text-anchor="middle" font-weight="600">Enter</text>
+<g transform="translate(280.552 164.293) rotate(-30.00)">
+  <rect x="-8" y="-8" width="16" height="16" rx="2" fill="#000" opacity=".3" filter="url(#soft)" transform="translate(.6 1.1)"/>
+  <circle cx="0" cy="-2.5" r="7.5" fill="hsl(167,100%,60%)" opacity=".85" filter="url(#glow)"/>
+  <rect x="-8" y="-8" width="16" height="16" rx="2" fill="#ffffff" fill-opacity=".38" stroke="#ffffff99" stroke-width=".3"/>
+  <rect x="-7.3" y="-7.3" width="14.6" height="13.6" rx="1.5" fill="#ffffff" opacity=".12"/>
+  <circle cx="0" cy="-2.5" r="1.6" fill="hsl(167,100%,85%)" opacity=".9" filter="url(#soft)"/>
+  <text x="0" y="2.80" font-size="2.3" fill="#1e1e1e" fill-opacity=".8" text-anchor="middle" font-weight="600">Enter</text>
 </g>
 <text x="85.50" y="188.35" font-size="4" fill="#3b3631" font-weight="700">corne-pg1316s</text>
-<text x="121.50" y="188.35" font-size="2.6" fill="#5b554d">42 teclas · Kailh PG1316S · keycaps do mikefive (impressas em 3D) · Seeed XIAO nRF52840 (BLE, sem fios) · bateria LiPo por baixo · PCB reversível · mockup ilustrativo</text>
+<text x="121.50" y="188.35" font-size="2.6" fill="#5b554d">42 teclas · Kailh PG1316S · LED RGB por tecla · keycaps Kailh transparentes · nice!nano + nice!view (BLE, sem fios) · bateria LiPo por baixo · PCB reversível · mockup ilustrativo</text>
 </svg>

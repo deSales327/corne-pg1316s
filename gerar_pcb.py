@@ -1,10 +1,10 @@
 """Gera uma PCB reversível no formato Corne (3x6 + 3 polegares) para switches
 ultrafinos Kailh PG1316S. O footprint do switch é desenhado aqui a partir da
-ficha técnica da Kailh (CPG1316S01D02); díodos, XIAO reversível e interruptor de
-energia vêm da PCB do dust. Cada tecla tem um LED RGB (WS2812B-2020) na cavidade do
-switch, com um segundo interruptor para lhes cortar a alimentação. Versão sem fios
-(XIAO BLE): o conector JST-XH da bateria e o furo para os fios são acrescentados
-depois por finalizar_pcb.py. Uso:
+ficha técnica da Kailh (CPG1316S01D02); díodos e interruptor de energia vêm da PCB
+do dust. Cada tecla tem um LED RGB (WS2812B-2020) na cavidade do switch. Controlador
+Pro Micro nRF52840 (nice!nano v2 ou clone) com a pinagem do Corne do ZMK, e um
+nice!view por cima dele. O conector JST-XH da bateria, o furo para os fios e o botão
+de reset são acrescentados depois por finalizar_pcb.py. Uso:
 
     python gerar_pcb.py <caminho/para/dust.kicad_pcb>
 
@@ -40,8 +40,18 @@ CAP = (16.5, 16.5)  # keycaps do mikefive (para checagem de colisão)
 LED_DY = -2.525
 DIODE_DX = 8.5
 
-# XIAO: pino do dust -> pino desta placa (D0..D5 = colunas, D6 = dados dos LEDs, D7..D10 = linhas)
-XIAO_NETS = {'c4': 'c5', 'c3': 'c4', 'c2': 'c3', 'c1': 'c2', 'c0': 'c1', 'D5': 'c0', 'tx': 'rgb0'}
+# Pro Micro (vista de cima, USB em cima), pino a pino de cima para baixo. Linhas e colunas
+# como no Corne do ZMK (linhas D4..D7, colunas D21..D14), nice!view como no nice_view_adapter
+# (CS = D1, MOSI = D2, SCK = D3). O RAW do nice!nano v2 é o BAT+ e o VCC (3,3 V) é cortado
+# pelo P0.13, por isso os LEDs ligam-se ao VCC.
+MCU_LEFT = ['nv_cs', 'rgb0', 'GND', 'GND', 'nv_mosi', 'nv_sck', 'r3', 'r2', 'r1', 'r0', '', '']
+MCU_RIGHT = ['BAT', 'GND', 'RST', 'VCC', 'c0', 'c1', 'c2', 'c3', 'c4', 'c5', '', '']
+MCU_LABELS = (['D1', 'D0', 'GND', 'GND', 'D2', 'D3', 'D4', 'D5', 'D6', 'D7', 'D8', 'D9'],
+              ['RAW', 'GND', 'RST', 'VCC', 'D21', 'D20', 'D19', 'D18', 'D15', 'D14', 'D16', 'D10'])
+NICE_VIEW = ['nv_mosi', 'nv_sck', 'VCC', 'GND', 'nv_cs']  # ordem física, vista de cima
+# Centro do controlador e posição do interruptor de energia, relativos à tecla c5/r3
+MCU_AT = (19.0, 14.75)
+PWR_AT = (33.22, 17.25)
 # Ordem da cadeia de LEDs: polegares, depois as colunas em serpentina da interna (c5) para a externa
 LED_ORDER = [(5, 'r0'), (4, 'r0'), (3, 'r0')] + [
     (c, r) for i, c in enumerate(range(5, -1, -1)) for r in (['r1', 'r2', 'r3'] if i % 2 == 0 else ['r3', 'r2', 'r1'])]
@@ -119,7 +129,10 @@ class Board:
                 n = find(child, 'net')
                 if n:
                     new = netmap(child[1].strip('"'), n[0][2].strip('"'))
-                    child[child.index(n[0])] = self.net(new)
+                    if new in ('', '-'):
+                        child.remove(n[0])  # pino sem ligação
+                    else:
+                        child[child.index(n[0])] = self.net(new)
         self.footprints.append(fp)
         return fp
 
@@ -183,6 +196,54 @@ LED_FP = """(footprint "corne:WS2812B-2020_reversible" (layer "F.Cu") (tedit 0) 
 )"""
 
 
+def text(s, x, y, layer, size=0.8, mirror=False, kind='user', angle=0):
+    j = ' (justify mirror)' if mirror else ''
+    a = f' {angle}' if angle else ''
+    return (f'  (fp_text {kind} "{s}" (at {fmt(x)} {fmt(y)}{a}) (layer "{layer}") (effects (font (size {size} {size}) '
+            f'(thickness {fmt(size * 0.15)})){j}) (tstamp X))\n')
+
+
+def mcu_fp():
+    """Pro Micro reversível sem pontes: os furos são os mesmos nas duas faces. Na metade
+    em que a placa fica com o verso para cima, o controlador monta-se virado para baixo
+    (como no Corne), e cada pino volta a cair no mesmo furo."""
+    s = '(footprint "corne:ProMicro_reversible" (layer "F.Cu") (tedit 0) (tstamp X)\n  (at 0 0)\n  (attr through_hole)\n'
+    s += text('MCU1', 0, -18, 'F.Fab', 1, kind='reference')
+    s += '  (fp_rect (start -9 -16.5) (end 9 16.5) (layer "F.Fab") (width 0.1) (fill none) (tstamp X))\n'
+    s += '  (fp_rect (start -9 -16.5) (end 9 16.5) (layer "B.Fab") (width 0.1) (fill none) (tstamp X))\n'
+    s += '  (fp_rect (start -4 -17.5) (end 4 -11) (layer "Dwgs.User") (width 0.1) (fill none) (tstamp X))\n'
+    s += text('nice!nano: COMPONENTES P/ CIMA', 0, 0, 'F.SilkS', 1, angle=90)
+    s += text('nice!nano: COMPONENTES P/ BAIXO', 0, 0, 'B.SilkS', 1, mirror=True, angle=90)
+    for col, (nets, labels) in enumerate(((MCU_LEFT, MCU_LABELS[0]), (MCU_RIGHT, MCU_LABELS[1]))):
+        x = -7.62 if col == 0 else 7.62
+        for i, (n, lab) in enumerate(zip(nets, labels)):
+            y = -13.97 + i * 2.54
+            num = i + 1 + 12 * col
+            shape = 'rect' if num == 1 else 'circle'
+            s += (f'  (pad "{num}" thru_hole {shape} (at {fmt(x)} {fmt(y)}) (size 1.7 1.7) (drill 1.0) '
+                  f'(layers *.Cu *.Mask) (net 1 "{n or "-"}") (tstamp X))\n')
+            lx = x + (2.3 if col == 0 else -2.3)
+            s += text(lab, lx, y, 'F.SilkS', 0.8)
+            s += text(lab, lx, y, 'B.SilkS', 0.8, mirror=True)
+    return s + ')'
+
+
+def niceview_fp():
+    """Duas filas de 5 furos para o nice!view: a de cima para a face da frente, a de baixo
+    (2,54 mm abaixo, ordem invertida) para o verso. O ecrã fica por cima do controlador."""
+    s = '(footprint "corne:nice_view_reversible" (layer "F.Cu") (tedit 0) (tstamp X)\n  (at 0 0)\n  (attr through_hole)\n'
+    s += text('DISP1', 0, 5, 'F.Fab', 1, kind='reference')
+    s += '  (fp_rect (start -7 -34.4) (end 7 1.6) (layer "F.Fab") (width 0.1) (fill none) (tstamp X))\n'
+    s += '  (fp_rect (start -7 -31.86) (end 7 4.14) (layer "B.Fab") (width 0.1) (fill none) (tstamp X))\n'
+    s += text('nice!view', 0, -1.9, 'F.SilkS', 0.8)
+    s += text('nice!view', 0, 4.45, 'B.SilkS', 0.8, mirror=True)
+    for row, (y, nets) in enumerate(((0, NICE_VIEW), (2.54, NICE_VIEW[::-1]))):
+        for i, n in enumerate(nets):
+            s += (f'  (pad "{i + 1 + 5 * row}" thru_hole circle (at {fmt((i - 2) * 2.54)} {fmt(y)}) (size 1.7 1.7) '
+                  f'(drill 1.0) (layers *.Cu *.Mask) (net 1 "{n}") (tstamp X))\n')
+    return s + ')'
+
+
 def templates(dust):
     def ref(fp):
         r = [c for c in find(fp, 'fp_text') if c[1] == 'reference']
@@ -193,11 +254,13 @@ def templates(dust):
     return dict(
         switch=parse(SWITCH_FP),
         led=parse(LED_FP),
+        mcu=parse(mcu_fp()),
+        niceview=parse(niceview_fp()),
         # díodo do dust só com os pads SMD (frente e verso)
         diode=[c for c in by_ref[('D1', '"F.Cu"')]
                if not (isinstance(c, list) and c[0] == 'pad' and c[2] == 'thru_hole')],
-        # bloco de eletrónica (XIAO e interruptor de energia), frente e verso
-        cluster=[f for f in fps if ref(f) in ('XIAO1', 'T1')],
+        # interruptor de energia do dust, frente e verso
+        power=[f for f in fps if ref(f) == 'T1'],
     )
 
 
@@ -248,30 +311,23 @@ def main(dust_path):
     for n, (c, r) in enumerate(LED_ORDER):
         i, k = next((i, k) for i, k in enumerate(keys, 1) if k['col'] == c and k['row'] == r)
         dx, dy = rot(0, LED_DY, k['a'])
-        pins = {'1': f'rgb{n + 1}', '2': 'GND', '3': f'rgb{n}', '4': 'VLED'}
+        pins = {'1': f'rgb{n + 1}', '2': 'GND', '3': f'rgb{n}', '4': 'VCC'}
         board.place(tpl['led'], k['x'] + dx, k['y'] + dy, k['a'], f'L{i}', lambda pad, old, p=pins: p[pad])
 
-    # Bloco de eletrónica: mesma posição relativa à coluna interna que no dust
+    # Bloco de eletrónica, à direita da coluna interna: controlador com o USB na borda de
+    # cima, nice!view por cima dele (furos logo abaixo), interruptor na borda da direita
     inner_top = next(k for k in keys if k['col'] == 5 and k['row'] == 'r3')
-    ox, oy = inner_top['x'] - 237.83833, inner_top['y'] - 98.948154
-    # O interruptor dos LEDs (RGB1) é uma cópia do de energia, 9 mm acima, na mesma borda:
-    # liga o BAT+ ao VLED (o de energia liga o BAT- ao GND)
-    copies = [(f, 'PWR1', 0.0, {}) for f in tpl['cluster']]
-    copies += [(f, 'RGB1', -9.0, {'BAT-': 'VLED', 'GND': 'BAT'}) for f in tpl['cluster']
-               if any(c[1] == 'reference' and c[2] == '"T1"' for c in find(f, 'fp_text'))]
-    for f, new_ref, dy, remap in copies:
-        at = find(f, 'at')[0]
-        r = [c for c in find(f, 'fp_text') if c[1] == 'reference']
-        old = r[0][2].strip('"') if r else ''
-        board.place(f, float(at[1]) + ox, float(at[2]) + oy + dy, None, new_ref if old == 'T1' else None,
-                    lambda pad, net, old=old, remap=remap:
-                    XIAO_NETS.get(net, net) if old == 'XIAO1' else remap.get(net, net))
-        if old == 'T1' and find(f, 'layer')[0][1] == '"B.Cu"':
+    mx, my = inner_top['x'] + MCU_AT[0], inner_top['y'] + MCU_AT[1]
+    board.place(tpl['mcu'], mx, my, 0, 'MCU1', lambda pad, old: old)
+    board.place(tpl['niceview'], mx, my + 17.9, 0, 'DISP1', lambda pad, old: old)
+    for f in tpl['power']:
+        board.place(f, inner_top['x'] + PWR_AT[0], inner_top['y'] + PWR_AT[1], None, 'PWR1')
+        if find(f, 'layer')[0][1] == '"B.Cu"':
             # as duas cópias do interruptor (frente/verso) partilham os furos: só a da frente os leva
             fp = board.footprints[-1]
             fp[:] = [c for c in fp if not (isinstance(c, list) and c[0] == 'pad' and c[2] == 'np_thru_hole')]
     cluster_area = box(inner_top['x'] + SX / 2, inner_top['y'] - 2.25,
-                       inner_top['x'] + 32.0, inner_top['y'] + 40.2)
+                       inner_top['x'] + 35.0, inner_top['y'] + 40.2)
 
     # ---- contorno: união das células das teclas + bloco, fechada e com cantos arredondados
     # (o invólucro convexo bloco+último polegar evita um entalhe entre os dois)
@@ -306,7 +362,7 @@ def main(dust_path):
     for (x1, y1), (x2, y2) in zip(ring, ring[1:]):
         gr.append(['gr_line', ['start', fmt(x1), fmt(y1)], ['end', fmt(x2), fmt(y2)],
                    ['layer', '"Edge.Cuts"'], ['width', '0.15'], ['tstamp', 'X']])
-    tx, ty = inner_top["x"] + 18.5, inner_top["y"] + 37.0
+    tx, ty = inner_top["x"] + 18.5, inner_top["y"] + 38.75
     for layer, extra in (('"F.SilkS"', []), ('"B.SilkS"', [['justify', 'mirror']])):
         gr.append(['gr_text', '"corne-pg1316s"', ['at', fmt(tx), fmt(ty)], ['layer', layer], ['tstamp', 'X'],
                    ['effects', ['font', ["size", "1.2", "1.2"], ["thickness", "0.18"]]] + extra])
@@ -316,7 +372,7 @@ def main(dust_path):
     pp[:] = [c for c in pp if not (isinstance(c, list) and c[0] == 'outputdirectory')]
     body = [
         ['general', ['thickness', '1.6']], ['paper', '"A3"'],
-        ['title_block', ['title', '"corne-pg1316s"'], ['rev', '"v0.4"'], ['company', '"baseado no dust (Jason Hazel) e no mikefive (Mike Holscher)"']],
+        ['title_block', ['title', '"corne-pg1316s"'], ['rev', '"v0.5"'], ['company', '"baseado no dust (Jason Hazel) e no mikefive (Mike Holscher)"']],
         find(dust, 'layers')[0], setup,
     ] + [['net', str(i), f'"{n}"'] for i, n in enumerate(board.nets)] + board.footprints + gr
     out = '(kicad_pcb (version 20211014) (generator pcbnew)\n'
@@ -345,7 +401,7 @@ def write_preview(shape, keys, board, caps):
          f'<polygon points="{pts}" fill="#4b2a7a" stroke="#c9b6ff" stroke-width="0.3"/>']
     for fp in board.footprints:
         r = [c for c in find(fp, 'fp_text') if c[1] == 'reference'][0][2].strip('"')
-        if re.fullmatch(r'[SD]\d+', r) or find(fp, 'layer')[0][1] != '"F.Cu"':
+        if re.fullmatch(r'[SDL]\d+', r) or find(fp, 'layer')[0][1] != '"F.Cu"':
             continue
         h = footprint_hull(fp)
         hp = ' '.join(f'{x:.2f},{y:.2f}' for x, y in h.exterior.coords) if h.geom_type == 'Polygon' else ''
